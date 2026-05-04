@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Boxes, FileText, GitBranch, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, FileText, GitBranch, ShieldCheck } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -66,12 +67,21 @@ export default function HomePage() {
               Lees de case <ArrowRight className="h-4 w-4" />
             </span>
           </div>
-          <div className="case-sketch" aria-hidden="true">
-            <Boxes className="h-10 w-10" />
-            <div className="flow-line" />
-            <FileText className="h-10 w-10" />
-            <div className="flow-line" />
-            <GitBranch className="h-10 w-10" />
+          <div className="case-preview-media" aria-hidden="true">
+            <Image
+              src="/cases/mobile-scan.png"
+              alt=""
+              width={1170}
+              height={2532}
+              className="case-preview-phone"
+            />
+            <Image
+              src="/cases/inbound-extraction.png"
+              alt=""
+              width={2940}
+              height={1912}
+              className="case-preview-desktop"
+            />
           </div>
         </Link>
       </section>
