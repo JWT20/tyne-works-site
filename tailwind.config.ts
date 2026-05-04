@@ -7,14 +7,14 @@ const config: Config = {
       colors: {
         ink: "#0b1530",
         brand: {
-          50: "#eef3ff",
-          100: "#dbe6ff",
-          200: "#bccfff",
-          500: "#3b5bdb",
-          600: "#2a44b8",
-          700: "#1e3a8a",
-          800: "#172f6e",
-          900: "#0f1f4a",
+          50: "#eef6f1",
+          100: "#d7e8dd",
+          200: "#abcdbc",
+          500: "#357a55",
+          600: "#276443",
+          700: "#1f5137",
+          800: "#173f2b",
+          900: "#0f2b1d",
         },
       },
       fontFamily: {
@@ -33,7 +33,7 @@ const config: Config = {
         prose: "68ch",
       },
       borderRadius: {
-        "2xl": "1.25rem",
+        "2xl": "0.75rem",
       },
     },
   },

@@ -1,9 +1,8 @@
 import Link from "next/link";
 
 const NAV = [
-  { href: "/aanpak", label: "Aanpak" },
-  { href: "/cases", label: "Cases" },
-  { href: "/over", label: "Over" },
+  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#sessie", label: "AI-sessie" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -22,7 +21,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link href="/contact" className="btn-primary text-sm py-2 px-4">
-            Plan een sessie
+            Neem contact op
           </Link>
         </nav>
       </div>
