@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Boxes, FileText, GitBranch, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, FileText, GitBranch, ShieldCheck } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -58,20 +59,29 @@ export default function HomePage() {
               Cross-docking dozen app
             </h3>
             <p className="text-ink/75 max-w-2xl">
-              Een applicatie die dozen, productinformatie en logistieke handelingen helpt
-              herkennen en structureren in een proces waar snelheid, afwijkingen en goede data
-              belangrijk zijn.
+              Een operationele AI-app waarmee een fietskoerier ongelabelde dozen kan herkennen,
+              boeken en aan de juiste klantorder koppelen zonder dat alle kennis bij de ondernemer
+              zelf hoeft te zitten.
             </p>
             <span className="inline-flex items-center gap-1 mt-6 text-sm font-medium text-brand-700">
               Lees de case <ArrowRight className="h-4 w-4" />
             </span>
           </div>
-          <div className="case-sketch" aria-hidden="true">
-            <Boxes className="h-10 w-10" />
-            <div className="flow-line" />
-            <FileText className="h-10 w-10" />
-            <div className="flow-line" />
-            <GitBranch className="h-10 w-10" />
+          <div className="case-preview-media" aria-hidden="true">
+            <Image
+              src="/cases/mobile-scan.png"
+              alt=""
+              width={1170}
+              height={2532}
+              className="case-preview-phone"
+            />
+            <Image
+              src="/cases/inbound-extraction.png"
+              alt=""
+              width={2940}
+              height={1912}
+              className="case-preview-desktop"
+            />
           </div>
         </Link>
       </section>
