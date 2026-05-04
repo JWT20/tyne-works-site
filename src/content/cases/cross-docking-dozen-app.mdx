@@ -1,44 +1,69 @@
 ---
 title: "Cross-docking dozen app"
 label: "Live"
-summary: "Een applicatie die dozen, productinformatie en logistieke handelingen helpt herkennen, structureren en controleren."
-client: "Logistiek proces"
+summary: "Een operationele AI-app waarmee een fietskoerier ongelabelde dozen kan herkennen, boeken en aan de juiste klantorder koppelen."
+client: "Wijnhandelaar"
 date: "2025-09-01"
 ---
 
 ## Het probleem
 
-In cross-docking draait veel om snelheid en uitzonderingen. Dozen komen binnen, moeten snel
-herkend of gekoppeld worden, en informatie moet door naar het juiste vervolgproces. In de
-praktijk zit veel logica verspreid over mensen, labels, lijsten, Excel-bestanden en bestaande
-systemen.
+De wijnhandelaar deed het cross-docking grotendeels zelf, omdat het proces bijna volledig
+afhankelijk was van zijn eigen kennis.
 
-Dat maakt het proces gevoelig voor vertraging, dubbel werk en fouten bij afwijkende situaties.
+Bestellingen kwamen binnen via WhatsApp. De dozen hadden geen duidelijke labels of barcodes.
+Alleen de handelaar wist welke doos welke wijn bevatte, welke bestelling daarbij hoorde en op
+welke klantrolcontainer die doos moest belanden. Er was ook geen voorraadsysteem dat bijhield
+wat er binnenkwam, wat al geboekt was en wat nog openstond.
+
+Daardoor kon een fietskoerier de fysieke handelingen wel uitvoeren, maar niet zelfstandig het
+proces overnemen. Zonder de handelaar erbij ontstond direct onzekerheid: welke doos is dit, voor
+welke klant is hij, hoeveel zijn er al verwerkt, en wat moet waarheen?
+
+Het gevolg: een proces dat praktisch uitbesteed leek te kunnen worden, bleef in werkelijkheid
+vastzitten in WhatsApp, ongelabelde dozen en de kennis in het hoofd van de ondernemer.
 
 ## De aanpak
 
-Ik heb een applicatie gebouwd die het proces explicieter maakt en technische ondersteuning
-toevoegt waar handwerk of interpretatie nodig is.
+Ik bouwde een applicatie waarin telefooncamera, AI-herkenning, productdata, voorraad en
+orderregels samenkomen. De fietskoerier scant een doos met de telefoon. De app herkent het
+product op basis van referentiebeelden, toont de zekerheid en geeft direct aan voor welke klant
+of rolcontainer de doos bedoeld is.
+
+Bij twijfel vraagt de app om menselijke bevestiging. Als er nog geen referentiefoto bestaat, kan
+de scan direct als eerste referentie worden opgeslagen. Zo wordt het systeem tijdens het werk
+slimmer, zonder dat de operatie stilvalt.
 
 Onder de motorkap draait het om:
 
-- het herkennen en structureren van input uit het proces;
-- het koppelen van dozen en productinformatie aan bestaande data;
-- controles op afwijkingen en ontbrekende informatie;
-- een werkbare interface voor medewerkers in de operatie;
-- ruimte voor menselijke controle wanneer de zekerheid niet hoog genoeg is.
+- doosherkenning via camera en referentiebeelden;
+- orderregels en klanttoewijzing;
+- voorraadmutaties bij inbound en booking;
+- pakbon- en factuurfoto's omzetten naar gestructureerde regels;
+- bevestiging door een mens wanneer de zekerheid niet hoog genoeg is.
 
 ## Wat AI toevoegt
 
-AI is hier geen los chatvenster, maar een flexibele laag rond het proces. Het helpt om
-ongestructureerde of wisselende input te begrijpen, signalen te herkennen en informatie in een
-bruikbare vorm door te zetten.
+AI werkt hier als flexibele laag rond een bestaand, bedrijfsspecifiek proces. Beelden van dozen
+worden omgezet naar beschrijvingen en embeddings voor productherkenning. Foto's van pakbonnen
+of facturen worden uitgelezen naar gestructureerde regels met supplier codes, aantallen en
+eenheden.
 
-De software blijft daarbij leidend: vaste regels waar dat kan, AI waar variatie zit, en menselijke
-controle waar het belangrijk is.
+De vaste software bewaakt daarna de harde regels: orderregels, voorraadmutaties,
+klanttoewijzing, rollen, logging en menselijke bevestiging bij onzekerheid.
+
+## Resultaat
+
+De wijnhandelaar hoeft het cross-docking niet meer volledig zelf te doen. Een fietskoerier kan
+met beperkte training dozen scannen, controleren en op de juiste klantrolcontainer zetten. De
+kennis die eerst in WhatsApp en in het hoofd van de ondernemer zat, is vertaald naar een werkend
+proces in software.
 
 ## Wat dit laat zien
 
-De waarde zit niet in een generieke AI-tool, maar in de vertaling van bedrijfsspecifieke logica
-naar een technische oplossing. Dat principe werkt ook bij compliance-documenten, ingewikkelde
-PDF's, Excel-mappings, orderstromen en processen waar bestaande software net niet past.
+De waarde zit niet in een losse AI-chatbot, maar in het vertalen van bedrijfsspecifieke operatie
+naar werkende software. AI vangt variatie op in beeld en documenten; de applicatie zorgt voor
+structuur, controle en actie.
+
+Dat is precies waar maatwerk AI nuttig wordt: wanneer bestaande systemen net niet aansluiten op
+hoe het werk echt gebeurt.

@@ -58,9 +58,9 @@ export default function HomePage() {
               Cross-docking dozen app
             </h3>
             <p className="text-ink/75 max-w-2xl">
-              Een applicatie die dozen, productinformatie en logistieke handelingen helpt
-              herkennen en structureren in een proces waar snelheid, afwijkingen en goede data
-              belangrijk zijn.
+              Een operationele AI-app waarmee een fietskoerier ongelabelde dozen kan herkennen,
+              boeken en aan de juiste klantorder koppelen zonder dat alle kennis bij de ondernemer
+              zelf hoeft te zitten.
             </p>
             <span className="inline-flex items-center gap-1 mt-6 text-sm font-medium text-brand-700">
               Lees de case <ArrowRight className="h-4 w-4" />
