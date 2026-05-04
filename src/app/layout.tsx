@@ -4,9 +4,9 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Tyne Works — Maatwerk AI-automatisering voor MKB",
+  title: "Tyne Works — AI-oplossingen voor bedrijfsspecifieke processen",
   description:
-    "Tyne Works helpt MKB met maatwerk AI-automatisering op de plekken waar generieke systemen tekortschieten: kennis in hoofden, Excel rond het ERP, bedrijfsspecifieke logica.",
+    "Tyne Works vertaalt bedrijfsspecifieke processen, documenten en Excel-logica naar praktische AI-oplossingen en werkende software.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -35,7 +35,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   return (
     <article className="container-tight py-16">
       <Link href="/cases" className="text-sm text-brand-700 hover:underline">
-        ← Alle cases
+        Portfolio
       </Link>
       {meta!.label && (
         <span className="inline-block text-xs font-medium text-brand-700 bg-brand-50 px-2 py-0.5 rounded-full mt-4 mb-3">

@@ -1,14 +1,18 @@
 # Tyne Works — site
 
-Marketingsite voor Tyne Works (Jans Tigelaar). Maatwerk AI-automatisering voor MKB.
+Compacte portfolio- en contactsite voor Tyne Works, het bedrijf van Jans Tigelaar.
+
+Tyne Works vertaalt bedrijfsspecifieke uitdagingen naar praktische AI-oplossingen:
+processen expliciet maken, ongestructureerde input begrijpen, en werkende software bouwen
+rond bestaande systemen en werkwijzen.
 
 ## Stack
 
-- Next.js 15 (App Router) — statische export (`output: "export"`)
+- Next.js 15 met App Router
+- Statische export (`output: "export"`)
 - Tailwind CSS
-- MDX voor cases (frontmatter via gray-matter)
+- MDX voor portfolio/cases
 - Lucide-react voor iconen
-- Te hosten op Vercel of elke statische host
 
 ## Lokaal draaien
 
@@ -25,19 +29,17 @@ Open http://localhost:3000.
 npm run build
 ```
 
-Output staat in `out/` (statische bestanden, klaar om te uploaden).
+De statische output staat in `out/`.
 
 ## Structuur
 
-```
+```text
 src/
   app/
-    page.tsx            home
-    aanpak/page.tsx
-    cases/page.tsx
-    cases/[slug]/page.tsx
-    over/page.tsx
-    contact/page.tsx
+    page.tsx              home met korte positionering
+    cases/page.tsx        portfolio-overzicht
+    cases/[slug]/page.tsx portfolio-detail
+    contact/page.tsx      contact en AI-inspiratiesessie
     layout.tsx
     globals.css
   components/
@@ -45,9 +47,9 @@ src/
     site-footer.tsx
   content/
     cases/
-      vision-scan-inventory.mdx   ← cases als MDX-bestanden
+      cross-docking-dozen-app.mdx
   lib/
-    cases.ts            ← leest MDX-frontmatter
+    cases.ts
   mdx-components.tsx
 ```
 
@@ -58,8 +60,8 @@ Plaats een `.mdx` bestand in `src/content/cases/` met frontmatter:
 ```mdx
 ---
 title: "Titel van de case"
-label: "Live"           # of "Lopend"
-summary: "Korte één-regel-samenvatting."
+label: "Live"
+summary: "Korte samenvatting."
 date: "2025-09-01"
 ---
 
@@ -69,18 +71,9 @@ date: "2025-09-01"
 
 De case verschijnt automatisch op `/cases` en op `/cases/<bestandsnaam>`.
 
-## Brand
-
-- Primair: deep blue `#1e3a8a` (`brand-700`)
-- Accent-tint: `#eef3ff` (`brand-50`)
-- Tekst: ink `#0b1530`
-- Afgeronde hoeken (`rounded-2xl`), subtiele schaduw
-
 ## Volgende stappen
 
-- [ ] Foto Jans op Over-pagina
-- [ ] Calendly-link op Contact-pagina
-- [ ] Tweede case toevoegen (smaakprofielen wijn-abonnement)
-- [ ] Domein `tyneworks.nl` registreren en koppelen
-- [ ] Plausible analytics
-- [ ] Resend/Formspree voor contactformulier (eventueel)
+- Echte agenda-link of boekingslink toevoegen zodra die beschikbaar is.
+- Eventueel één screenshot of schets toevoegen aan de cross-docking case.
+- Domein `tyneworks.nl` registreren en koppelen.
+- Analytics toevoegen, bijvoorbeeld Plausible.
