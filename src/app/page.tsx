@@ -36,7 +36,7 @@ export default function HomePage() {
         <div>
           <NumberedRow n="01" body="Je werkt met situaties die geen standaardpakket goed afvangt — er zit altijd nét iets extra in." />
           <NumberedRow n="02" body="De cruciale kennis zit in de hoofden van een paar mensen — en daar wil je niet permanent van afhankelijk blijven." />
-          <NumberedRow n="03" body="SaaS sluit net niet aan: je past je proces aan het systeem aan in plaats van andersom." />
+          <NumberedRow n="03" body="Veel werk loopt in losse Excels, mailtjes, app-berichten en sheets náást je bestaande software — daar is iets compacters voor nodig." />
           <NumberedRow n="04" body="Er staat een ERP of vast systeem, maar tussen de mensen en dat systeem in zit nog veel handwerk dat beter kan." />
           <NumberedRow n="05" body="Je wilt groeien zonder dat de werkwijze platslaat tot iets generieks." />
         </div>
