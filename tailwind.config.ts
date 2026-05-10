@@ -5,35 +5,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0b1530",
-        brand: {
-          50: "#eef6f1",
-          100: "#d7e8dd",
-          200: "#abcdbc",
-          500: "#357a55",
-          600: "#276443",
-          700: "#1f5137",
-          800: "#173f2b",
-          900: "#0f2b1d",
+        paper: "#f3efe6",
+        ink: "#0b1d2a",
+        navy: {
+          800: "#0b1d2a",
         },
+        accent: "#2f6fed",
+        muted: "#5b6473",
+        rule: "#d9d3c5",
       },
       fontFamily: {
-        sans: [
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "sans-serif",
-        ],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
+      letterSpacing: {
+        label: "0.14em",
       },
       maxWidth: {
         prose: "68ch",
-      },
-      borderRadius: {
-        "2xl": "0.75rem",
       },
     },
   },

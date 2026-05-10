@@ -35,21 +35,33 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <article className="container-tight py-16">
-      <Link href="/cases" className="text-sm text-brand-700 hover:underline">
-        Portfolio
+    <article className="container-tight py-20">
+      <Link
+        href="/cases"
+        className="font-mono text-[11px] uppercase tracking-label text-muted hover:text-ink"
+      >
+        ← Werk
       </Link>
-      {meta!.label && (
-        <span className="inline-block text-xs font-medium text-brand-700 bg-brand-50 px-2 py-0.5 rounded-full mt-4 mb-3">
-          {meta!.label}
-        </span>
-      )}
-      <h1 className="text-3xl md:text-4xl heading-rule">{meta!.title}</h1>
-      <p className="text-lg text-ink/80 max-w-prose mb-10">{meta!.summary}</p>
 
-      {slug === "cross-docking-dozen-app" && <CrossDockingVisuals />}
+      <header className="mt-10 grid gap-10 md:grid-cols-[1.2fr_1fr] md:gap-16 items-start border-b border-rule pb-12 mb-12">
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="label">{meta!.client ?? "Tyne Works"}</span>
+            {meta!.label && (
+              <>
+                <span className="text-muted/40">/</span>
+                <span className="label text-ink/80">{meta!.label}</span>
+              </>
+            )}
+          </div>
+          <h1 className="display-1">{meta!.title}</h1>
+        </div>
+        <p className="text-lg text-muted leading-relaxed md:pt-3">{meta!.summary}</p>
+      </header>
 
-      <div className="prose prose-headings:text-brand-700 prose-headings:font-bold prose-strong:text-ink max-w-prose">
+      {slug === "breakaway-koeriers-dozen-app" && <CrossDockingVisuals />}
+
+      <div className="case-detail-prose">
         <MDXContent />
       </div>
     </article>

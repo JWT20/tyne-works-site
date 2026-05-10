@@ -5,69 +5,122 @@
 @layer base {
   html {
     color: theme(colors.ink);
-    background: #fbfaf7;
+    background: theme(colors.paper);
     -webkit-font-smoothing: antialiased;
   }
   body {
     @apply font-sans;
   }
-  h1, h2, h3, h4 {
-    @apply text-brand-700 font-bold tracking-tight;
+  ::selection {
+    background: theme(colors.ink);
+    color: theme(colors.paper);
   }
 }
 
 @layer components {
   .container-tight {
-    @apply mx-auto max-w-5xl px-6;
+    @apply mx-auto max-w-6xl px-6;
   }
-  .eyebrow {
-    @apply text-sm font-medium text-brand-700 mb-3;
+
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-label text-muted;
   }
-  .section-intro {
-    @apply mb-8;
+
+  .section-marker {
+    @apply font-mono text-[11px] uppercase tracking-label text-muted mb-6 flex items-center gap-3;
   }
-  .heading-rule {
-    @apply relative pb-3 mb-6;
-  }
-  .heading-rule::after {
+  .section-marker::after {
     content: "";
-    @apply absolute left-0 bottom-0 h-1 w-16 bg-brand-700 rounded-full;
+    @apply h-px flex-1 bg-rule;
   }
-  .callout {
-    @apply rounded-xl bg-brand-50 border border-brand-100 p-6 md:p-8 text-ink;
+
+  .display-1 {
+    @apply font-serif font-normal leading-[1.05] text-5xl md:text-7xl tracking-tight;
   }
-  .card-soft {
-    @apply rounded-xl border border-brand-100 bg-white p-6 shadow-sm;
+  .display-2 {
+    @apply font-serif font-normal leading-[1.1] text-4xl md:text-5xl tracking-tight;
   }
+  .display-3 {
+    @apply font-serif font-normal leading-[1.15] text-3xl md:text-4xl tracking-tight;
+  }
+
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-lg bg-brand-700 px-5 py-3 text-white font-medium hover:bg-brand-800 transition;
+    @apply inline-flex items-center gap-2 bg-ink px-5 py-3 text-paper font-mono text-xs uppercase tracking-label hover:bg-navy-800/90 transition;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 text-brand-700 font-medium hover:bg-brand-50 transition;
+    @apply inline-flex items-center gap-2 border border-ink/30 px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:border-ink transition;
   }
-  .pill {
-    @apply inline-block rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700;
+
+  .info-card {
+    @apply border border-rule bg-paper p-6 md:p-7;
   }
-  .case-feature {
-    @apply grid gap-8 rounded-xl border border-brand-100 bg-white p-6 md:grid-cols-[1fr_260px] md:p-8 shadow-sm hover:border-brand-200 transition;
+  .info-row {
+    @apply grid grid-cols-[110px_1fr] gap-4 py-3 border-b border-rule last:border-0;
   }
-  .case-preview-media {
-    @apply relative hidden min-h-52 overflow-hidden rounded-lg bg-stone-50 p-4 md:block;
+  .info-row dt {
+    @apply font-mono text-[11px] uppercase tracking-label text-muted pt-0.5;
   }
-  .case-preview-phone {
-    @apply absolute bottom-4 left-5 w-24 rounded-xl border border-white shadow-lg;
+  .info-row dd {
+    @apply text-ink text-sm leading-relaxed;
   }
-  .case-preview-desktop {
-    @apply absolute right-4 top-5 h-28 w-44 rounded-lg border border-white object-cover shadow-lg;
-    object-position: center 22%;
+
+  .numbered-row {
+    @apply grid grid-cols-[44px_1fr] gap-4 py-5 border-b border-rule last:border-0;
   }
+  .numbered-row .num {
+    @apply font-mono text-[11px] uppercase tracking-label text-muted pt-1;
+  }
+  .numbered-row .body {
+    @apply text-ink text-base md:text-lg leading-snug;
+  }
+
+  .step-card {
+    @apply border border-rule bg-paper p-6 md:p-7 flex flex-col;
+  }
+  .step-card .step-label {
+    @apply font-mono text-[11px] uppercase tracking-label text-muted mb-5;
+  }
+  .step-card .step-title {
+    @apply font-serif text-2xl md:text-3xl mb-3 leading-tight;
+  }
+  .step-card .step-meta {
+    @apply font-mono text-[11px] uppercase tracking-label text-muted mb-3;
+  }
+  .step-card.is-primary {
+    @apply bg-ink text-paper border-ink;
+  }
+  .step-card.is-primary .step-label,
+  .step-card.is-primary .step-meta {
+    @apply text-paper/60;
+  }
+
+  .case-card {
+    @apply block border border-paper/15 p-7 md:p-8 hover:border-paper/40 transition;
+  }
+  .case-card .case-card-meta {
+    @apply font-mono text-[11px] uppercase tracking-label text-paper/55 mb-5 flex items-center gap-3;
+  }
+  .case-card .case-card-title {
+    @apply font-serif text-2xl md:text-3xl text-paper mb-3 leading-tight;
+  }
+  .case-card .case-card-summary {
+    @apply text-paper/75 text-sm leading-relaxed mb-6 max-w-md;
+  }
+  .case-card .case-card-link {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-paper;
+  }
+
+  .case-detail-prose {
+    @apply max-w-prose;
+  }
+
   .case-visual-block {
     @apply mb-12 grid gap-5 md:grid-cols-[0.82fr_1.18fr];
   }
   .case-visual-main,
   .case-shot,
   .case-flow-card {
-    @apply overflow-hidden rounded-xl border border-brand-100 bg-white shadow-sm;
+    @apply overflow-hidden border border-rule bg-paper;
   }
   .case-visual-main {
     @apply p-4;
@@ -76,33 +129,33 @@
     @apply grid gap-5;
   }
   .case-visual-label {
-    @apply mb-3 text-xs font-semibold uppercase text-brand-700;
+    @apply mb-3 font-mono text-[11px] uppercase tracking-label text-muted;
   }
   .case-mobile-image {
-    @apply h-[520px] w-full rounded-lg border border-brand-100 object-cover;
+    @apply h-[520px] w-full border border-rule object-cover;
     object-position: center 8%;
   }
   .case-inbound-image {
-    @apply h-72 w-full border-y border-brand-100 object-cover;
+    @apply h-72 w-full border-y border-rule object-cover;
     object-position: center 22%;
   }
   .case-visual-main p,
   .case-shot p {
-    @apply mt-4 text-sm text-ink/70;
+    @apply mt-4 text-sm text-muted;
   }
   .case-flow-card {
     @apply p-5;
   }
   .case-flow-step {
-    @apply flex items-center gap-3 rounded-lg border border-brand-100 bg-brand-50/60 px-4 py-3 text-sm font-medium text-ink;
+    @apply flex items-center gap-3 border border-rule bg-paper px-4 py-3 text-sm font-medium text-ink;
   }
   .case-flow-step svg {
-    @apply shrink-0 text-brand-700;
+    @apply shrink-0 text-ink;
   }
   .case-flow-arrow {
-    @apply mx-auto my-2 h-5 w-5 text-brand-700/50;
+    @apply mx-auto my-2 h-5 w-5 text-ink/40;
   }
   .case-flow-footer {
-    @apply mt-4 flex items-center gap-2 text-xs font-medium text-brand-700;
+    @apply mt-4 flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-muted;
   }
 }

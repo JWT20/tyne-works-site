@@ -2,31 +2,42 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getAllCases } from "@/lib/cases";
 
-export const metadata = { title: "Portfolio — Tyne Works" };
+export const metadata = { title: "Werk — Tyne Works" };
 
 export default function CasesPage() {
   const cases = getAllCases();
 
   return (
-    <article className="container-tight py-16">
-      <p className="eyebrow">Portfolio</p>
-      <h1 className="text-3xl md:text-5xl leading-tight max-w-3xl mb-5">
-        Werk rond echte processen.
+    <article className="container-tight py-20">
+      <p className="section-marker">Werk</p>
+      <h1 className="display-1 max-w-3xl mb-8">
+        Software rond echte processen.
       </h1>
-      <p className="text-lg text-ink/80 max-w-prose mb-12">
+      <p className="text-lg text-muted max-w-prose mb-16 leading-relaxed">
         Een compacte selectie van projecten waarin bedrijfsspecifieke logica is vertaald naar
-        praktische software.
+        lichte software op maat.
       </p>
 
-      <div className="grid gap-6">
+      <div className="border-t border-rule">
         {cases.map((c) => (
-          <Link key={c.slug} href={`/cases/${c.slug}`} className="case-feature">
-            <div>
-              {c.label && <span className="pill">{c.label}</span>}
-              <h2 className="text-2xl mt-4 mb-2">{c.title}</h2>
-              <p className="text-ink/75 max-w-2xl">{c.summary}</p>
-              <span className="inline-flex items-center gap-1 mt-5 text-sm font-medium text-brand-700">
-                Lees meer <ArrowRight className="h-4 w-4" />
+          <Link
+            key={c.slug}
+            href={`/cases/${c.slug}`}
+            className="block border-b border-rule py-10 md:py-12 group"
+          >
+            <div className="grid gap-6 md:grid-cols-[200px_1fr_auto] md:gap-10 items-baseline">
+              <div className="flex flex-col gap-1">
+                <span className="label">{c.client ?? "Tyne Works"}</span>
+                <span className="label text-ink/80">{c.label}</span>
+              </div>
+              <div>
+                <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-3 group-hover:text-accent transition">
+                  {c.title}
+                </h2>
+                <p className="text-muted max-w-2xl leading-relaxed">{c.summary}</p>
+              </div>
+              <span className="hidden md:inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-ink">
+                Lees <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </div>
           </Link>

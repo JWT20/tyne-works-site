@@ -5,43 +5,64 @@ export const metadata = { title: "Contact — Tyne Works" };
 
 export default function ContactPage() {
   return (
-    <article className="container-tight py-16">
-      <p className="eyebrow">Contact</p>
-      <h1 className="text-3xl md:text-5xl leading-tight max-w-3xl mb-5">
-        Laten we een bedrijfsproces uitpluizen.
+    <article className="container-tight py-20">
+      <p className="section-marker">Contact</p>
+      <h1 className="display-1 max-w-3xl mb-8">
+        Laten we een proces uitpluizen.
       </h1>
-      <p className="text-lg text-ink/80 max-w-prose mb-10">
-        Heb je een proces waar veel handwerk, uitzonderingen, documenten of Excel-logica in zit?
-        Stuur kort wat er speelt. Dan kijken we samen of AI daar praktisch iets kan toevoegen.
+      <p className="text-lg text-muted max-w-prose mb-16 leading-relaxed">
+        Heb je een proces vol uitzonderingen, persoonlijke kennis of net-niet-passende SaaS? Kies
+        hieronder hoe je wilt starten — of mail Jans direct.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-        <div className="callout">
-          <h2 className="text-2xl mb-4">AI-inspiratiesessie</h2>
-          <p className="text-ink/80 mb-5">
-            Een eerste gesprek van 45 minuten. We bespreken waar AI goed in is, waar de risico&apos;s
-            zitten, en welke kleine pilot logisch zou zijn.
+      <div className="grid gap-6 md:grid-cols-2 mb-16">
+        <div className="step-card is-primary">
+          <div className="step-label">Aanbevolen start</div>
+          <div className="step-meta">Vaste prijs op aanvraag</div>
+          <h2 className="step-title">Discovery</h2>
+          <p className="text-paper/75 leading-relaxed mb-6">
+            Een korte, betaalde verkenning van één concreet proces. We brengen het in kaart,
+            benoemen kansen en leveren een tastbaar voorstel voor de Build-fase. Geen rapport om
+            in een la te leggen — uitkomst is een werkbaar plan en een prijs voor de bouw.
           </p>
-          <ul className="space-y-3 text-sm text-ink/75">
-            <li>Geen technische voorbereiding nodig.</li>
-            <li>Geschikt voor processen met PDF&apos;s, Excels, mails, scans of uitzonderingen.</li>
-            <li>Je krijgt een eerlijk beeld van wat haalbaar is en wat niet.</li>
-          </ul>
+          <Link
+            href="mailto:jans@tyneworks.nl?subject=Discovery"
+            className="inline-flex items-center gap-2 bg-paper px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:bg-paper/90 transition w-fit"
+          >
+            Plan Discovery <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
 
-        <div className="card-soft">
-          <Mail className="h-7 w-7 text-brand-700 mb-4" />
-          <h2 className="text-xl mb-3">Mail Jans</h2>
-          <p className="text-sm text-ink/70 mb-5">
-            Beschrijf in een paar zinnen welk proces je wilt verbeteren.
+        <div id="sessie" className="step-card scroll-mt-24">
+          <div className="step-label">Vrijblijvend</div>
+          <div className="step-meta">45 minuten · gratis</div>
+          <h2 className="step-title">AI-inspiratiesessie</h2>
+          <p className="text-muted leading-relaxed mb-6">
+            Liever eerst breder verkennen wat AI in jouw context kan? In 45 minuten kijken we
+            naar één proces uit jouw organisatie. Je krijgt een nuchter beeld van kansen,
+            risico&apos;s en een mogelijke pilot. Geen voorbereiding nodig.
           </p>
           <Link
             href="mailto:jans@tyneworks.nl?subject=AI-inspiratiesessie"
-            className="btn-primary"
+            className="btn-ghost w-fit"
           >
-            jans@tyneworks.nl <ArrowRight className="h-4 w-4" />
+            Plan AI-sessie <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+      </div>
+
+      <div className="border-t border-rule pt-8 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p className="label mb-2">Of direct</p>
+          <p className="font-serif text-2xl">Mail Jans</p>
+        </div>
+        <Link
+          href="mailto:jans@tyneworks.nl"
+          className="inline-flex items-center gap-3 font-mono text-sm text-ink hover:text-accent"
+        >
+          <Mail className="h-4 w-4" />
+          jans@tyneworks.nl
+        </Link>
       </div>
     </article>
   );
