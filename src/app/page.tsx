@@ -10,8 +10,8 @@ export default function HomePage() {
       <section className="container-tight pt-20 pb-24">
         <p className="label mb-8">Tyne Works · Jans Tigelaar</p>
         <h1 className="display-1 max-w-4xl">
-          Lichte software voor de manier waarop{" "}
-          <span className="font-serif italic text-accent">jij werkt</span>
+          Van vakkennis naar{" "}
+          <span className="font-serif italic text-accent">schaalbare systemen</span>
         </h1>
         <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
           Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren
