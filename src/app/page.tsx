@@ -14,9 +14,8 @@ export default function HomePage() {
           <span className="font-serif italic text-accent">jij werkt</span>
         </h1>
         <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
-          SaaS is vaak te generiek voor hoe jouw bedrijf echt werkt. Maatwerk is meestal te
-          duur en te traag. Daartussen ligt lichte software op maat: kort traject, vaste prijs,
-          gebouwd rond jouw proces — met AI als capability waar dat nuttig is.
+          Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren
+          en nieuwe omzet mogelijk maken.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link href="/contact" className="btn-primary">
@@ -31,14 +30,14 @@ export default function HomePage() {
       <section className="container-tight py-20">
         <p className="section-marker">01 — Voor wie</p>
         <h2 className="display-2 max-w-3xl mb-12">
-          Voor bedrijven met processen die nergens netjes inpassen.
+          Voor bedrijven die draaien op ervaring en uitzonderingen.
         </h2>
         <div>
           <NumberedRow n="01" body="Je werkt met situaties die geen standaardpakket goed afvangt — er zit altijd nét iets extra in." />
-          <NumberedRow n="02" body="De cruciale kennis zit in de hoofden van een paar mensen — en daar wil je niet permanent van afhankelijk blijven." />
-          <NumberedRow n="03" body="Veel werk loopt in losse Excels, mailtjes, app-berichten en sheets náást je bestaande software — daar is iets compacters voor nodig." />
-          <NumberedRow n="04" body="Er staat een ERP of vast systeem, maar tussen de mensen en dat systeem in zit nog veel handwerk dat beter kan." />
-          <NumberedRow n="05" body="Je wilt groeien zonder dat de werkwijze platslaat tot iets generieks." />
+          <NumberedRow n="02" body="Cruciale kennis zit in hoofden in plaats van systemen." />
+          <NumberedRow n="03" body="Het echte werk gebeurt buiten het systeem." />
+          <NumberedRow n="04" body="Tussen je mensen en je ERP zit nog veel handmatig werk." />
+          <NumberedRow n="05" body="Je wilt groeien zonder generiek te worden." />
         </div>
       </section>
 
