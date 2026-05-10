@@ -38,9 +38,8 @@ export default function ContactPage() {
           <div className="step-meta">45 minuten · gratis</div>
           <h2 className="step-title">AI-inspiratiesessie</h2>
           <p className="text-muted leading-relaxed mb-6">
-            Liever eerst breder verkennen wat AI in jouw context kan? In 45 minuten kijken we
-            naar één proces uit jouw organisatie. Je krijgt een nuchter beeld van kansen,
-            risico&apos;s en een mogelijke pilot. Geen voorbereiding nodig.
+            In 45 minuten kijken we naar wat AI nu eigenlijk is, waar het wel en niet goed in is,
+            welke risico&apos;s en governance erbij horen, en hoe je van idee naar praktijk komt.
           </p>
           <Link
             href="mailto:jans@tyneworks.nl?subject=AI-inspiratiesessie"
