@@ -150,6 +150,19 @@
     @apply max-w-prose;
   }
 
+  .portrait {
+    @apply max-w-[280px];
+  }
+  .portrait-frame {
+    @apply flex items-center justify-center border border-dashed border-rule aspect-[4/5] text-muted bg-paper;
+  }
+  .portrait-frame .placeholder {
+    @apply font-mono text-[10px] uppercase tracking-label text-muted;
+  }
+  .portrait-caption {
+    @apply mt-3 font-mono text-[11px] uppercase tracking-label text-muted;
+  }
+
   .case-testimonial {
     @apply border border-rule bg-paper grid gap-8 md:grid-cols-[180px_1fr] items-center p-8 md:p-10 mb-12;
   }

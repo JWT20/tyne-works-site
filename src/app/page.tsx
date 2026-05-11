@@ -10,6 +10,7 @@ export default function HomePage() {
       <section className="hero relative overflow-hidden">
         <div className="hero-grid" aria-hidden />
         <div className="container-tight pt-20 pb-24 relative">
+          <p className="label text-accent mb-3">Software + AI voor bedrijfsspecifieke processen</p>
           <p className="label mb-8">Tyne Works · Jans Tigelaar</p>
           <h1 className="display-1 max-w-4xl">
             Van vakkennis naar{" "}
@@ -83,6 +84,13 @@ export default function HomePage() {
               ervaren mensen, uitzonderingen, losse tools en handmatig werk rond bestaande
               systemen.
             </p>
+
+            <div className="portrait mt-10">
+              <div className="portrait-frame">
+                <span className="placeholder">Portret Jans Tigelaar</span>
+              </div>
+              <p className="portrait-caption">Jans Tigelaar — oprichter</p>
+            </div>
           </div>
           <div className="info-card">
             <p className="label mb-5">Aan de slag</p>
