@@ -10,7 +10,7 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="text-sm text-muted max-w-xs leading-relaxed">
-            Lichte software op maat. Tussen generieke SaaS en duur maatwerk.
+            Software en AI voor processen die niet standaard zijn.
           </p>
         </div>
         <div>
