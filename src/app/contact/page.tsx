@@ -8,7 +8,7 @@ export default function ContactPage() {
     <article className="container-tight py-20">
       <p className="section-marker">Contact</p>
       <h1 className="display-1 max-w-3xl mb-8">
-        Laten we een proces uitpluizen.
+        Van handwerk naar een werkbaar systeem.
       </h1>
       <p className="text-lg text-muted max-w-prose mb-16 leading-relaxed">
         Heb je een proces vol uitzonderingen, persoonlijke kennis of net-niet-passende SaaS? Kies
