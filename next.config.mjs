@@ -1,8 +1,13 @@
 import createMDX from "@next/mdx";
+import remarkFrontmatter from "remark-frontmatter";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const withMDX = createMDX({});
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkFrontmatter],
+  },
+});
 const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
