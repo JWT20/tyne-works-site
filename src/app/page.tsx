@@ -85,9 +85,11 @@ export default function HomePage() {
           <div className="info-card">
             <p className="label mb-5">Aan de slag</p>
             <p className="text-ink text-base leading-relaxed mb-6">
-              Discovery is de logische start: één proces uitpluizen, kansen helder krijgen,
-              voorstel op tafel. Liever eerst breed verkennen wat AI in jouw context kan? Plan
-              dan een vrijblijvende AI-inspiratiesessie.
+              Heb je een concreet proces in gedachten? Begin met een Discovery: we werken het
+              samen uit en je krijgt een werkbaar plan met prijs. Wil je eerst meer leren over
+              wat AI is en wat het voor jouw bedrijf kan betekenen? Een vrijblijvende
+              AI-inspiratiesessie geeft je een eerlijk beeld van de mogelijkheden, risico&apos;s
+              en governance.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact" className="btn-primary">
