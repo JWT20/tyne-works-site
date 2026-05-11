@@ -7,23 +7,26 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="container-tight pt-20 pb-24">
-        <p className="label mb-8">Tyne Works · Jans Tigelaar</p>
-        <h1 className="display-1 max-w-4xl">
-          Van vakkennis naar{" "}
-          <span className="font-serif italic text-accent">schaalbare systemen</span>
-        </h1>
-        <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
-          Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren
-          en nieuwe omzet mogelijk maken.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <Link href="/contact" className="btn-primary">
-            Plan een Discovery <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link href="/contact#sessie" className="btn-ghost">
-            Of een AI-inspiratiesessie
-          </Link>
+      <section className="hero relative overflow-hidden">
+        <div className="hero-grid" aria-hidden />
+        <div className="container-tight pt-20 pb-24 relative">
+          <p className="label mb-8">Tyne Works · Jans Tigelaar</p>
+          <h1 className="display-1 max-w-4xl">
+            Van vakkennis naar{" "}
+            <span className="font-serif italic text-accent">schaalbare systemen</span>
+          </h1>
+          <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
+            Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren
+            en nieuwe omzet mogelijk maken.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link href="/contact" className="btn-primary">
+              Plan een Discovery <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link href="/contact#sessie" className="btn-ghost">
+              Of een AI-inspiratiesessie
+            </Link>
+          </div>
         </div>
       </section>
 
