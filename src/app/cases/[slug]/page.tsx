@@ -53,12 +53,31 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
         <p className="text-lg text-muted leading-relaxed md:pt-3">{meta!.summary}</p>
       </header>
 
+      <CaseTestimonial client={meta!.client ?? ""} />
+
       {slug === "breakaway-koeriers-dozen-app" && <CrossDockingVisuals />}
 
       <div className="case-detail-prose">
         <MDXContent />
       </div>
     </article>
+  );
+}
+
+function CaseTestimonial({ client }: { client: string }) {
+  return (
+    <section className="case-testimonial" aria-label="Klantquote">
+      <div className="case-testimonial-logo">
+        <span className="placeholder">Logo {client || "klant"}</span>
+      </div>
+      <div>
+        <p className="case-testimonial-quote">
+          Quote van de klant komt hier — een korte, krachtige uitspraak over wat het heeft
+          opgeleverd.
+        </p>
+        <p className="case-testimonial-attribution">Naam · Rol · {client || "Bedrijf"}</p>
+      </div>
+    </section>
   );
 }
 
