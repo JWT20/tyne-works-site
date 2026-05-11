@@ -11,8 +11,8 @@ export default function ContactPage() {
         Van handwerk naar een werkbaar systeem.
       </h1>
       <p className="text-lg text-muted max-w-prose mb-16 leading-relaxed">
-        Heb je een proces vol uitzonderingen, persoonlijke kennis of net-niet-passende SaaS? Kies
-        hieronder hoe je wilt starten — of mail Jans direct.
+        Heb je een proces dat draait op uitzonderingen, ervaring of losse tools? We brengen
+        eerst het echte proces in kaart — daarna kijken we welke software of AI logisch is.
       </p>
 
       <div className="grid gap-6 md:grid-cols-2 mb-16">
