@@ -36,7 +36,7 @@ export default function HomePage() {
           <NumberedRow n="01" body="Standaardsoftware stopt waar het echte proces begint." />
           <NumberedRow n="02" body="Cruciale kennis zit in hoofden in plaats van systemen." />
           <NumberedRow n="03" body="Het echte werk gebeurt buiten het systeem." />
-          <NumberedRow n="04" body="Tussen je mensen en je ERP zit nog veel handmatig werk." />
+          <NumberedRow n="04" body="Je ERP dekt het proces, maar niet de uitzonderingen." />
           <NumberedRow n="05" body="Je wilt groeien zonder generiek te worden." />
         </div>
       </section>
