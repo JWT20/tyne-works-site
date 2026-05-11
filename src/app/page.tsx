@@ -33,11 +33,9 @@ export default function HomePage() {
           Voor bedrijven waar groei vastloopt tussen handwerk en systemen.
         </h2>
         <div>
-          <NumberedRow n="01" body="Standaardsoftware stopt waar het echte proces begint." />
-          <NumberedRow n="02" body="Cruciale kennis zit in hoofden in plaats van systemen." />
-          <NumberedRow n="03" body="Het echte werk gebeurt buiten het systeem." />
-          <NumberedRow n="04" body="Je ERP dekt het proces, maar niet de uitzonderingen." />
-          <NumberedRow n="05" body="Je wilt groeien zonder generiek te worden." />
+          <NumberedRow n="01" body="Standaardsoftware dekt 80% van je proces. De laatste 20% kost de meeste tijd." />
+          <NumberedRow n="02" body="Cruciale kennis zit in hoofden, niet in systemen." />
+          <NumberedRow n="03" body="Groeien betekent nu nóg meer handwerk, of generieker worden." />
         </div>
       </section>
 
