@@ -47,12 +47,6 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
         <div>
           <div className="flex items-center gap-3 mb-6">
             <span className="label">{meta!.client ?? "Tyne Works"}</span>
-            {meta!.label && (
-              <>
-                <span className="text-muted/40">/</span>
-                <span className="label text-ink/80">{meta!.label}</span>
-              </>
-            )}
           </div>
           <h1 className="display-1">{meta!.title}</h1>
         </div>

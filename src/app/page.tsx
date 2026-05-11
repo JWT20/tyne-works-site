@@ -54,8 +54,6 @@ export default function HomePage() {
               <Link key={c.slug} href={`/cases/${c.slug}`} className="case-card">
                 <div className="case-card-meta">
                   <span>{c.client ?? "Tyne Works"}</span>
-                  <span className="text-paper/30">/</span>
-                  <span>{c.label}</span>
                 </div>
                 <h3 className="case-card-title">{c.title}</h3>
                 <p className="case-card-summary">{c.summary}</p>

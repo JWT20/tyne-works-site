@@ -26,9 +26,8 @@ export default function CasesPage() {
             className="block border-b border-rule py-10 md:py-12 group"
           >
             <div className="grid gap-6 md:grid-cols-[200px_1fr_auto] md:gap-10 items-baseline">
-              <div className="flex flex-col gap-1">
+              <div>
                 <span className="label">{c.client ?? "Tyne Works"}</span>
-                <span className="label text-ink/80">{c.label}</span>
               </div>
               <div>
                 <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-3 group-hover:text-accent transition">
