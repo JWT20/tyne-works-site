@@ -26,7 +26,7 @@ export default function ContactPage() {
             in een la te leggen — uitkomst is een werkbaar plan en een prijs voor de bouw.
           </p>
           <Link
-            href="mailto:jans@tyneworks.nl?subject=Discovery"
+            href="mailto:jans.tigelaar@tyneworks.nl?subject=Discovery"
             className="inline-flex items-center gap-2 bg-paper px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:bg-paper/90 transition w-fit"
           >
             Plan Discovery <ArrowRight className="h-4 w-4" />
@@ -42,7 +42,7 @@ export default function ContactPage() {
             welke risico&apos;s en governance erbij horen, en hoe je van idee naar praktijk komt.
           </p>
           <Link
-            href="mailto:jans@tyneworks.nl?subject=AI-inspiratiesessie"
+            href="mailto:jans.tigelaar@tyneworks.nl?subject=AI-inspiratiesessie"
             className="btn-ghost w-fit"
           >
             Plan AI-sessie <ArrowRight className="h-4 w-4" />
@@ -56,11 +56,11 @@ export default function ContactPage() {
           <p className="font-serif text-2xl">Mail Jans</p>
         </div>
         <Link
-          href="mailto:jans@tyneworks.nl"
+          href="mailto:jans.tigelaar@tyneworks.nl"
           className="inline-flex items-center gap-3 font-mono text-sm text-ink hover:text-accent"
         >
           <Mail className="h-4 w-4" />
-          jans@tyneworks.nl
+          jans.tigelaar@tyneworks.nl
         </Link>
       </div>
     </article>
