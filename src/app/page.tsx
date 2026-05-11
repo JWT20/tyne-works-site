@@ -30,10 +30,10 @@ export default function HomePage() {
       <section className="container-tight py-20">
         <p className="section-marker">01 — Voor wie</p>
         <h2 className="display-2 max-w-3xl mb-12">
-          Voor bedrijven waar groei vastloopt op handwerk en ervaring.
+          Voor bedrijven waar groei vastloopt tussen handwerk en systemen.
         </h2>
         <div>
-          <NumberedRow n="01" body="Je werkt met situaties die geen standaardpakket goed afvangt — er zit altijd nét iets extra in." />
+          <NumberedRow n="01" body="Standaardsoftware stopt waar het echte proces begint." />
           <NumberedRow n="02" body="Cruciale kennis zit in hoofden in plaats van systemen." />
           <NumberedRow n="03" body="Het echte werk gebeurt buiten het systeem." />
           <NumberedRow n="04" body="Tussen je mensen en je ERP zit nog veel handmatig werk." />
