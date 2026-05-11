@@ -76,18 +76,20 @@ export default function HomePage() {
               We maken impliciete bedrijfskennis operationeel schaalbaar.
             </h2>
             <p className="text-muted text-lg leading-relaxed max-w-prose">
-              Tyne Works is opgezet door Jans Tigelaar. De insteek is simpel: bedrijven met
-              persoonlijke kennis, eigen logica of een ERP waar nog veel handwerk omheen zit,
-              verdienen software die bij hun werkwijze past — niet een systeem waar ze omheen
-              moeten werken.
+              Tyne Works bouwt lichte software voor bedrijven waar standaardsoftware tekortschiet,
+              maar een zwaar maatwerktraject niet logisch is. Vaak draait het echte proces nog op
+              ervaren mensen, uitzonderingen, losse tools en handmatig werk rond bestaande
+              systemen.
             </p>
           </div>
           <div className="info-card">
             <p className="label mb-5">Aan de slag</p>
             <p className="text-ink text-base leading-relaxed mb-6">
-              Discovery is de logische start: één proces uitpluizen, kansen helder krijgen,
-              voorstel op tafel. Liever eerst breed verkennen wat AI in jouw context kan? Plan
-              dan een vrijblijvende AI-inspiratiesessie.
+              Heb je een concreet proces in gedachten? Begin met een Discovery: we werken het
+              samen uit en je krijgt een werkbaar plan met prijs. Wil je eerst meer leren over
+              wat AI is en wat het voor jouw bedrijf kan betekenen? Een vrijblijvende
+              AI-inspiratiesessie geeft je een eerlijk beeld van de mogelijkheden, risico&apos;s
+              en governance.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact" className="btn-primary">
