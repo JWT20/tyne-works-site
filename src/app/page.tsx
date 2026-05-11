@@ -76,10 +76,10 @@ export default function HomePage() {
               We maken impliciete bedrijfskennis operationeel schaalbaar.
             </h2>
             <p className="text-muted text-lg leading-relaxed max-w-prose">
-              Tyne Works is opgezet door Jans Tigelaar. De insteek is simpel: bedrijven met
-              persoonlijke kennis, eigen logica of een ERP waar nog veel handwerk omheen zit,
-              verdienen software die bij hun werkwijze past — niet een systeem waar ze omheen
-              moeten werken.
+              Tyne Works bouwt lichte software voor bedrijven waar standaardsoftware tekortschiet,
+              maar een zwaar maatwerktraject niet logisch is. Vaak draait het echte proces nog op
+              ervaren mensen, uitzonderingen, losse tools en handmatig werk rond bestaande
+              systemen.
             </p>
           </div>
           <div className="info-card">
