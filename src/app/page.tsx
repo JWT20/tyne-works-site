@@ -47,7 +47,7 @@ export default function HomePage() {
             <span className="text-paper/60">02 — Recent gebouwd</span>
           </p>
           <h2 className="display-2 text-paper max-w-3xl mb-12">
-            Werk rond echte processen.
+            Software voor processen tussen mensen en systemen.
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {cases.map((c) => (
