@@ -37,10 +37,10 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   return (
     <article className="container-tight py-20">
       <Link
-        href="/cases"
+        href="/"
         className="font-mono text-[11px] uppercase tracking-label text-muted hover:text-ink"
       >
-        ← Werk
+        ← Tyne Works
       </Link>
 
       <header className="mt-10 grid gap-10 md:grid-cols-[1.2fr_1fr] md:gap-16 items-start border-b border-rule pb-12 mb-12">
