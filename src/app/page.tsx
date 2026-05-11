@@ -11,7 +11,6 @@ export default function HomePage() {
         <div className="hero-grid" aria-hidden />
         <div className="container-tight pt-20 pb-24 relative">
           <p className="label text-accent mb-3">Software & AI voor bedrijfsspecifieke processen</p>
-          <p className="label mb-8">Tyne Works · Jans Tigelaar</p>
           <h1 className="display-1 max-w-4xl">
             Van vakkennis naar{" "}
             <span className="font-serif italic text-accent">schaalbare systemen</span>
