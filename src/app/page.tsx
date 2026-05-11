@@ -47,7 +47,9 @@ export default function HomePage() {
           <h2 className="display-2 text-paper max-w-3xl mb-12">
             Software voor processen tussen mensen en systemen.
           </h2>
-          <div className="grid gap-6 md:grid-cols-2">
+        </div>
+        <div className="cases-scroller">
+          <div className="cases-scroller-track">
             {cases.map((c) => (
               <Link key={c.slug} href={`/cases/${c.slug}`} className="case-card">
                 <div className="case-card-meta">
@@ -62,6 +64,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        <div className="h-20" aria-hidden />
       </section>
 
       <section className="container-tight py-24">

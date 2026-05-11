@@ -94,8 +94,29 @@
     @apply text-paper/60;
   }
 
+  .cases-scroller {
+    @apply overflow-x-auto;
+    scrollbar-width: thin;
+    scrollbar-color: theme(colors.paper / 30%) transparent;
+  }
+  .cases-scroller::-webkit-scrollbar {
+    height: 6px;
+  }
+  .cases-scroller::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .cases-scroller::-webkit-scrollbar-thumb {
+    background: theme(colors.paper / 30%);
+    border-radius: 3px;
+  }
+  .cases-scroller-track {
+    @apply mx-auto flex gap-6 px-6 pb-4;
+    max-width: calc(72rem);
+    width: max-content;
+  }
   .case-card {
-    @apply block border border-paper/15 p-7 md:p-8 hover:border-paper/40 transition;
+    @apply block border border-paper/15 p-7 md:p-8 hover:border-paper/40 transition flex-shrink-0;
+    width: min(420px, 85vw);
   }
   .case-card .case-card-meta {
     @apply font-mono text-[11px] uppercase tracking-label text-paper/55 mb-5 flex items-center gap-3;
