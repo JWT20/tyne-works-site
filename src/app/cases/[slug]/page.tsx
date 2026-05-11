@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Camera, FileText, MessagesSquare, PackageCheck, Route } from "lucide-react";
 import { getCaseSlugs, getCaseMeta } from "@/lib/cases";
 
 export function generateStaticParams() {
@@ -113,32 +112,6 @@ function CrossDockingVisuals() {
             Een pakbonfoto wordt omgezet naar productregels, aantallen, supplier codes en
             controlepunten.
           </p>
-        </div>
-
-        <div className="case-flow-card">
-          <div className="case-flow-step">
-            <MessagesSquare className="h-5 w-5" />
-            <span>WhatsApp order + ongelabelde doos</span>
-          </div>
-          <ArrowDown className="case-flow-arrow" />
-          <div className="case-flow-step">
-            <Camera className="h-5 w-5" />
-            <span>AI herkent of leest uit</span>
-          </div>
-          <ArrowDown className="case-flow-arrow" />
-          <div className="case-flow-step">
-            <FileText className="h-5 w-5" />
-            <span>Software controleert order en voorraad</span>
-          </div>
-          <ArrowDown className="case-flow-arrow" />
-          <div className="case-flow-step">
-            <PackageCheck className="h-5 w-5" />
-            <span>Doos naar juiste klantrolcontainer</span>
-          </div>
-          <div className="case-flow-footer">
-            <Route className="h-4 w-4" />
-            <span>Van kennis in het hoofd naar een overdraagbaar proces.</span>
-          </div>
         </div>
       </div>
     </section>
