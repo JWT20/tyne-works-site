@@ -13,7 +13,7 @@ export default function HomePage() {
           <p className="label text-accent mb-3">Software & AI voor bedrijfsspecifieke processen</p>
           <h1 className="display-1 max-w-4xl">
             Van vakkennis naar{" "}
-            <span className="font-serif italic text-accent">schaalbare systemen</span>
+            <span className="font-serif italic text-accent">slimme processen</span>
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
             Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren
