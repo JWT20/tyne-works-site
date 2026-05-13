@@ -16,6 +16,7 @@ export function SiteFooter() {
         <div>
           <p className="label mb-3">Contact</p>
           <p className="text-sm text-ink">jans.tigelaar@tyneworks.nl</p>
+          <p className="text-sm text-muted mt-2">KVK 42059892</p>
         </div>
       </div>
       <div className="border-t border-rule">
