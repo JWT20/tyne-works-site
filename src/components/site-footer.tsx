@@ -16,12 +16,11 @@ export function SiteFooter() {
         <div>
           <p className="label mb-3">Contact</p>
           <p className="text-sm text-ink">jans.tigelaar@tyneworks.nl</p>
-          <p className="text-sm text-muted mt-2">KVK 42059892</p>
         </div>
       </div>
       <div className="border-t border-rule">
         <div className="container-tight py-4 text-xs text-muted flex justify-between font-mono uppercase tracking-label">
-          <span>© {new Date().getFullYear()} Tyne Works</span>
+          <span>© {new Date().getFullYear()} Tyne Works · KVK 42059892</span>
           <span>Jans Tigelaar</span>
         </div>
       </div>
