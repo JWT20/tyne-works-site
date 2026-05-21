@@ -19,9 +19,12 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-rule">
-        <div className="container-tight py-4 text-xs text-muted flex justify-between font-mono uppercase tracking-label">
+        <div className="container-tight py-4 text-xs text-muted flex justify-between gap-6 font-mono uppercase tracking-label">
           <span>© {new Date().getFullYear()} Tyne Works · KVK 42059892</span>
-          <span>Jans Tigelaar</span>
+          <span className="text-right">
+            Jans Tigelaar
+            <span className="block mt-1">Co-creator: Stijn Verhoeff</span>
+          </span>
         </div>
       </div>
     </footer>
