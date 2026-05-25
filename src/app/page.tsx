@@ -39,6 +39,7 @@ export default function HomePage() {
           <NumberedRow n="01" body="Standaardsoftware dekt 80% van je proces. De laatste 20% kost de meeste tijd." />
           <NumberedRow n="02" body="Cruciale kennis zit in hoofden, niet in systemen." />
           <NumberedRow n="03" body="Groeien betekent nu nóg meer handwerk, of generieker worden." />
+          <NumberedRow n="04" body="Medewerkers bouwen zelf tools en prototypes — sneller dan systemen ze kunnen bijhouden." />
         </div>
       </section>
 
@@ -78,10 +79,9 @@ export default function HomePage() {
               We maken impliciete bedrijfskennis operationeel schaalbaar.
             </h2>
             <p className="text-muted text-lg leading-relaxed max-w-prose">
-              Tyne Works bouwt lichte software voor bedrijven waar standaardsoftware tekortschiet,
-              maar een zwaar maatwerktraject niet logisch is. Vaak draait het echte proces nog op
-              ervaren mensen, uitzonderingen, losse tools en handmatig werk rond bestaande
-              systemen.
+              Tyne Works bouwt lichte software op maat voor specifieke bedrijfsprocessen.
+              We richten ons op het deel van een proces dat handmatig gaat of buiten
+              bestaande systemen valt.
             </p>
 
             <div className="portrait mt-10">
@@ -110,8 +110,55 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+        <div className="mt-20">
+          <p className="label mb-8">Zo werken we</p>
+          <div className="grid gap-4 md:grid-cols-2">
+            <StepCard
+              n="01"
+              title="Discovery"
+              body="We brengen je proces in kaart: waar zit de kennis, het handwerk, de uitzonderingen. Je krijgt een helder beeld en een werkbaar plan met prijs."
+            />
+            <StepCard
+              n="02"
+              title="Bouwen"
+              body="Lichte software: één afgebakend proces, geen platform. Ingepast in de tools die je al gebruikt."
+            />
+            <StepCard
+              n="03"
+              title="Inzicht"
+              body="Zichtbaar blijft welke input, context en keuzes tot een uitkomst leiden. AI is geen zwarte doos: je verbetert op echte signalen, niet op gevoel."
+              primary
+            />
+            <StepCard
+              n="04"
+              title="Oplevering & support"
+              body="We zetten het live. Daarna kies je: wij nemen onderhoud en doorontwikkeling op ons, of we dragen het over aan je team."
+            />
+          </div>
+        </div>
       </section>
     </>
+  );
+}
+
+function StepCard({
+  n,
+  title,
+  body,
+  primary,
+}: {
+  n: string;
+  title: string;
+  body: string;
+  primary?: boolean;
+}) {
+  return (
+    <div className={primary ? "step-card is-primary" : "step-card"}>
+      <p className="step-label">{n}</p>
+      <h3 className="step-title">{title}</h3>
+      <p className="leading-relaxed text-[15px] md:text-base">{body}</p>
+    </div>
   );
 }
 
