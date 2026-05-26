@@ -102,6 +102,11 @@ export default function HomePage() {
               body="Wat werkt wordt strak gemaakt: rollen, data, controles, beheer en overdracht naar de dagelijkse operatie."
               detail="De build is gericht op betrouwbaar gebruik: minder losse acties, duidelijke feedback en beheer dat niet afhankelijk is van een ontwikkelaar."
             />
+            <ApproachStep
+              n="04"
+              title="Inzicht"
+              body="Zichtbaar blijft welke input, context en keuzes tot een uitkomst leiden. AI is geen zwarte doos: je verbetert op echte signalen, niet op gevoel."
+            />
           </div>
         </div>
       </section>
@@ -181,33 +186,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        <div className="mt-20">
-          <p className="label mb-8">Zo werken we</p>
-          <div className="grid gap-4 md:grid-cols-2">
-            <StepCard
-              n="01"
-              title="Discovery"
-              body="We brengen je proces in kaart: waar zit de kennis, het handwerk, de uitzonderingen. Je krijgt een helder beeld en een werkbaar plan met prijs."
-            />
-            <StepCard
-              n="02"
-              title="Bouwen"
-              body="Lichte software: één afgebakend proces, geen platform. Ingepast in de tools die je al gebruikt."
-            />
-            <StepCard
-              n="03"
-              title="Inzicht"
-              body="Zichtbaar blijft welke input, context en keuzes tot een uitkomst leiden. AI is geen zwarte doos: je verbetert op echte signalen, niet op gevoel."
-              primary
-            />
-            <StepCard
-              n="04"
-              title="Oplevering & support"
-              body="We zetten het live. Daarna kies je: wij nemen onderhoud en doorontwikkeling op ons, of we dragen het over aan je team."
-            />
-          </div>
-        </div>
       </section>
     </>
   );
@@ -218,27 +196,9 @@ function ProofPoint({ title, body, detail }: { title: string; body: string; deta
     <div className="proof-point" tabIndex={0}>
       <p className="proof-point-title">{title}</p>
       <p className="proof-point-body">{body}</p>
-      <p className="hover-detail">{detail}</p>
-    </div>
-  );
-}
-
-function StepCard({
-  n,
-  title,
-  body,
-  primary,
-}: {
-  n: string;
-  title: string;
-  body: string;
-  primary?: boolean;
-}) {
-  return (
-    <div className={primary ? "step-card is-primary" : "step-card"}>
-      <p className="step-label">{n}</p>
-      <h3 className="step-title">{title}</h3>
-      <p className="leading-relaxed text-[15px] md:text-base">{body}</p>
+      <p className="hover-detail">
+        <span>{detail}</span>
+      </p>
     </div>
   );
 }
@@ -252,7 +212,7 @@ function ApproachStep({
   n: string;
   title: string;
   body: string;
-  detail: string;
+  detail?: string;
 }) {
   return (
     <div className="approach-step" tabIndex={0}>
@@ -260,7 +220,11 @@ function ApproachStep({
       <div>
         <h3 className="approach-step-title">{title}</h3>
         <p className="approach-step-body">{body}</p>
-        <p className="hover-detail">{detail}</p>
+        {detail && (
+          <p className="hover-detail">
+            <span>{detail}</span>
+          </p>
+        )}
       </div>
     </div>
   );
