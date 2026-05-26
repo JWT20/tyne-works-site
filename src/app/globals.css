@@ -89,14 +89,26 @@
   }
 
   .scroll-highlight-section {
-    @apply relative min-h-[320vh] py-0;
+    @apply relative py-0 md:min-h-[220vh];
   }
   .scroll-highlight-sticky {
-    @apply sticky top-20 min-h-[calc(100vh-5rem)] py-6;
+    @apply py-10 md:sticky md:top-20 md:min-h-[calc(100vh-5rem)] md:py-6;
+  }
+  .scroll-highlight-layout {
+    @apply grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:items-start;
   }
 
   .numbered-row {
     @apply relative mb-3 grid grid-cols-[44px_1fr] gap-4 border border-rule bg-paper p-5 transition duration-200 ease-out outline-none last:mb-0;
+  }
+  @media (min-width: 768px) {
+    .numbered-row {
+      margin-bottom: 0.5rem;
+      padding: 0.75rem;
+    }
+    .numbered-row .body {
+      font-size: 1rem;
+    }
   }
   .numbered-row.is-active,
   .numbered-row:focus-visible {
@@ -167,7 +179,8 @@
     @apply text-paper/75;
   }
   .hover-detail {
-    @apply mt-0 max-h-0 overflow-hidden text-sm leading-relaxed text-paper/75 opacity-0 transition-all duration-200 ease-out;
+    @apply mt-0 overflow-hidden text-sm leading-relaxed text-paper/75 opacity-0 transition-all duration-200 ease-out md:grid md:grid-rows-[0fr] md:overflow-visible;
+    max-height: 0;
   }
   .proof-point:hover .hover-detail,
   .proof-point:focus-visible .hover-detail,
@@ -175,27 +188,20 @@
   .numbered-row:focus-visible .hover-detail,
   .approach-step:hover .hover-detail,
   .approach-step:focus-visible .hover-detail {
-    @apply mt-3 max-h-48 opacity-100;
+    @apply mt-3 opacity-100 md:grid-rows-[1fr];
+    max-height: 12rem;
   }
-
-  .step-card {
-    @apply border border-rule bg-paper p-6 md:p-7 flex flex-col;
-  }
-  .step-card .step-label {
-    @apply font-mono text-[11px] uppercase tracking-label text-muted mb-5;
-  }
-  .step-card .step-title {
-    @apply font-serif text-2xl md:text-3xl mb-3 leading-tight;
-  }
-  .step-card .step-meta {
-    @apply font-mono text-[11px] uppercase tracking-label text-muted mb-3;
-  }
-  .step-card.is-primary {
-    @apply bg-ink text-paper border-ink;
-  }
-  .step-card.is-primary .step-label,
-  .step-card.is-primary .step-meta {
-    @apply text-paper/60;
+  @media (min-width: 768px) {
+    .numbered-row .hover-detail {
+      margin-top: 0.5rem;
+      grid-template-rows: 1fr;
+      max-height: none;
+      min-height: 2.25rem;
+    }
+    .numbered-row .hover-detail > span {
+      min-height: 0;
+      overflow: hidden;
+    }
   }
 
   .cases-scroller {
