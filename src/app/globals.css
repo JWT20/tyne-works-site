@@ -88,44 +88,17 @@
     @apply text-ink text-sm leading-relaxed;
   }
 
-  .creator-card {
-    @apply max-w-md border border-rule bg-paper p-5 transition duration-200 ease-out outline-none;
+  .scroll-highlight-section {
+    @apply relative min-h-[260vh] py-0;
   }
-  .creator-card:hover,
-  .creator-card:focus-visible {
-    @apply -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 text-paper shadow-lg;
-  }
-  .creator-card-label {
-    @apply mb-3 font-mono text-[11px] uppercase tracking-label text-muted;
-  }
-  .creator-card-name {
-    @apply font-serif text-3xl leading-tight text-ink;
-  }
-  .creator-card-role {
-    @apply mt-2 font-mono text-[11px] uppercase tracking-label text-accent;
-  }
-  .creator-card-detail {
-    @apply mt-4 text-sm leading-relaxed text-muted;
-  }
-  .creator-card:hover .creator-card-label,
-  .creator-card:focus-visible .creator-card-label,
-  .creator-card:hover .creator-card-role,
-  .creator-card:focus-visible .creator-card-role {
-    @apply text-paper/60;
-  }
-  .creator-card:hover .creator-card-name,
-  .creator-card:focus-visible .creator-card-name {
-    @apply text-paper;
-  }
-  .creator-card:hover .creator-card-detail,
-  .creator-card:focus-visible .creator-card-detail {
-    @apply text-paper/75;
+  .scroll-highlight-sticky {
+    @apply sticky top-20 min-h-[calc(100vh-5rem)] py-6;
   }
 
   .numbered-row {
     @apply relative mb-3 grid grid-cols-[44px_1fr] gap-4 border border-rule bg-paper p-5 transition duration-200 ease-out outline-none last:mb-0;
   }
-  .numbered-row:hover,
+  .numbered-row.is-active,
   .numbered-row:focus-visible {
     @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
   }
@@ -135,9 +108,9 @@
   .numbered-row .body {
     @apply text-ink text-base md:text-lg leading-snug;
   }
-  .numbered-row:hover .num,
+  .numbered-row.is-active .num,
   .numbered-row:focus-visible .num,
-  .numbered-row:hover .body,
+  .numbered-row.is-active .body,
   .numbered-row:focus-visible .body {
     @apply text-paper;
   }
@@ -198,7 +171,7 @@
   }
   .proof-point:hover .hover-detail,
   .proof-point:focus-visible .hover-detail,
-  .numbered-row:hover .hover-detail,
+  .numbered-row.is-active .hover-detail,
   .numbered-row:focus-visible .hover-detail,
   .approach-step:hover .hover-detail,
   .approach-step:focus-visible .hover-detail {
@@ -266,6 +239,9 @@
     @apply max-w-prose;
   }
 
+  .portraits-grid {
+    @apply grid max-w-xl gap-6 sm:grid-cols-2;
+  }
   .portrait {
     @apply max-w-[280px];
   }
