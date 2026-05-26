@@ -27,6 +27,32 @@ export default function HomePage() {
               Of een AI-inspiratiesessie
             </Link>
           </div>
+          <div className="creator-card mt-12" tabIndex={0}>
+            <p className="creator-card-label">Co-creator</p>
+            <p className="creator-card-name">Stijn Verhoeff</p>
+            <p className="creator-card-role">Data analytics en AI-workflows</p>
+            <p className="creator-card-detail">
+              Werkt mee aan de praktische vertaalslag van data, proceskennis en slimme tooling
+              naar begrijpelijke software.
+            </p>
+          </div>
+          <div className="proof-strip mt-16">
+            <ProofPoint
+              title="Proces eerst"
+              body="We brengen het echte werk in kaart voordat er software wordt bedacht."
+              detail="Dat voorkomt mooie schermen die niet passen bij de praktijk. Uitzonderingen, overdrachten en beslismomenten worden eerst zichtbaar."
+            />
+            <ProofPoint
+              title="Licht maatwerk"
+              body="Kleine, gerichte systemen rond bestaande tools en mensen."
+              detail="Geen groot platform wanneer een slimme koppeling, dashboard of workflow genoeg is. Het systeem blijft compact en beheersbaar."
+            />
+            <ProofPoint
+              title="AI waar logisch"
+              body="AI helpt bij variatie; software bewaakt de stappen en beslissingen."
+              detail="AI wordt ingezet voor ongestructureerde input zoals tekst, foto's of uitzonderingen. De vaste procesregels blijven controleerbaar."
+            />
+          </div>
         </div>
       </section>
 
@@ -36,16 +62,57 @@ export default function HomePage() {
           Voor bedrijven waar groei vastloopt tussen handwerk en systemen.
         </h2>
         <div>
-          <NumberedRow n="01" body="Standaardsoftware dekt 80% van je proces. De laatste 20% kost de meeste tijd." />
-          <NumberedRow n="02" body="Cruciale kennis zit in hoofden, niet in systemen." />
-          <NumberedRow n="03" body="Groeien betekent nu nóg meer handwerk, of generieker worden." />
+          <NumberedRow
+            n="01"
+            body="Standaardsoftware dekt 80% van je proces. De laatste 20% kost de meeste tijd."
+            detail="Juist die laatste uitzonderingen bepalen vaak de kwaliteit van levering, klantcontact en marge. Daar bouwen we precies omheen."
+          />
+          <NumberedRow
+            n="02"
+            body="Cruciale kennis zit in hoofden, niet in systemen."
+            detail="Als alleen ervaren mensen weten wat er moet gebeuren, wordt groei kwetsbaar. We maken die kennis stap voor stap overdraagbaar."
+          />
+          <NumberedRow
+            n="03"
+            body="Groeien betekent nu nog meer handwerk, of generieker worden."
+            detail="Het doel is niet alles automatiseren, maar het handwerk verminderen zonder de eigen manier van werken kwijt te raken."
+          />
         </div>
       </section>
 
-      <section className="bg-navy-800 text-paper mt-20">
+      <section id="aanpak" className="container-tight py-20 scroll-mt-20">
+        <p className="section-marker">02 - Aanpak</p>
+        <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16 items-start">
+          <h2 className="display-2 max-w-xl">
+            Eerst begrijpen wat er echt gebeurt. Daarna pas bouwen.
+          </h2>
+          <div className="grid gap-4">
+            <ApproachStep
+              n="01"
+              title="Discovery"
+              body="We kiezen een concreet proces, tekenen de uitzonderingen uit en bepalen waar software of AI waarde toevoegt."
+              detail="Aan het einde ligt er geen abstract advies, maar een scherp afgebakend bouwplan met keuzes, risico's en eerste prioriteiten."
+            />
+            <ApproachStep
+              n="02"
+              title="Prototype"
+              body="Een kleine werkende versie maakt aannames zichtbaar en geeft gebruikers iets om op te reageren."
+              detail="Door vroeg iets klikbaars te maken, zie je sneller wat logisch voelt in de dagelijkse operatie en wat nog schuurt."
+            />
+            <ApproachStep
+              n="03"
+              title="Build"
+              body="Wat werkt wordt strak gemaakt: rollen, data, controles, beheer en overdracht naar de dagelijkse operatie."
+              detail="De build is gericht op betrouwbaar gebruik: minder losse acties, duidelijke feedback en beheer dat niet afhankelijk is van een ontwikkelaar."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="cases" className="bg-navy-800 text-paper mt-20 scroll-mt-20">
         <div className="container-tight py-20">
           <p className="section-marker text-paper/60">
-            <span className="text-paper/60">02 — Recent gebouwd</span>
+            <span className="text-paper/60">03 - Recent gebouwd</span>
           </p>
           <h2 className="display-2 text-paper max-w-3xl mb-12">
             Software voor processen tussen mensen en systemen.
@@ -73,7 +140,7 @@ export default function HomePage() {
       <section className="container-tight py-24">
         <div className="grid gap-12 md:grid-cols-[1fr_1fr] md:gap-16 items-start">
           <div>
-            <p className="section-marker">03 — Over</p>
+            <p className="section-marker">04 - Over</p>
             <h2 className="display-2 mb-8 max-w-xl">
               We maken impliciete bedrijfskennis operationeel schaalbaar.
             </h2>
@@ -115,11 +182,47 @@ export default function HomePage() {
   );
 }
 
-function NumberedRow({ n, body }: { n: string; body: string }) {
+function NumberedRow({ n, body, detail }: { n: string; body: string; detail: string }) {
   return (
-    <div className="numbered-row">
+    <div className="numbered-row" tabIndex={0}>
       <div className="num">{n}</div>
-      <div className="body">{body}</div>
+      <div>
+        <div className="body">{body}</div>
+        <p className="hover-detail">{detail}</p>
+      </div>
+    </div>
+  );
+}
+
+function ProofPoint({ title, body, detail }: { title: string; body: string; detail: string }) {
+  return (
+    <div className="proof-point" tabIndex={0}>
+      <p className="proof-point-title">{title}</p>
+      <p className="proof-point-body">{body}</p>
+      <p className="hover-detail">{detail}</p>
+    </div>
+  );
+}
+
+function ApproachStep({
+  n,
+  title,
+  body,
+  detail,
+}: {
+  n: string;
+  title: string;
+  body: string;
+  detail: string;
+}) {
+  return (
+    <div className="approach-step" tabIndex={0}>
+      <span className="approach-step-num">{n}</span>
+      <div>
+        <h3 className="approach-step-title">{title}</h3>
+        <p className="approach-step-body">{body}</p>
+        <p className="hover-detail">{detail}</p>
+      </div>
     </div>
   );
 }

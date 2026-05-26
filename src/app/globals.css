@@ -10,6 +10,15 @@
   }
   body {
     @apply font-sans;
+    caret-color: transparent;
+  }
+  body :where(a, p, h1, h2, h3, span, div) {
+    user-select: none;
+  }
+  input,
+  textarea {
+    caret-color: auto;
+    user-select: text;
   }
   ::selection {
     background: theme(colors.ink);
@@ -79,14 +88,121 @@
     @apply text-ink text-sm leading-relaxed;
   }
 
+  .creator-card {
+    @apply max-w-md border border-rule bg-paper p-5 transition duration-200 ease-out outline-none;
+  }
+  .creator-card:hover,
+  .creator-card:focus-visible {
+    @apply -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 text-paper shadow-lg;
+  }
+  .creator-card-label {
+    @apply mb-3 font-mono text-[11px] uppercase tracking-label text-muted;
+  }
+  .creator-card-name {
+    @apply font-serif text-3xl leading-tight text-ink;
+  }
+  .creator-card-role {
+    @apply mt-2 font-mono text-[11px] uppercase tracking-label text-accent;
+  }
+  .creator-card-detail {
+    @apply mt-4 text-sm leading-relaxed text-muted;
+  }
+  .creator-card:hover .creator-card-label,
+  .creator-card:focus-visible .creator-card-label,
+  .creator-card:hover .creator-card-role,
+  .creator-card:focus-visible .creator-card-role {
+    @apply text-paper/60;
+  }
+  .creator-card:hover .creator-card-name,
+  .creator-card:focus-visible .creator-card-name {
+    @apply text-paper;
+  }
+  .creator-card:hover .creator-card-detail,
+  .creator-card:focus-visible .creator-card-detail {
+    @apply text-paper/75;
+  }
+
   .numbered-row {
-    @apply grid grid-cols-[44px_1fr] gap-4 py-5 border-b border-rule last:border-0;
+    @apply relative mb-3 grid grid-cols-[44px_1fr] gap-4 border border-rule bg-paper p-5 transition duration-200 ease-out outline-none last:mb-0;
+  }
+  .numbered-row:hover,
+  .numbered-row:focus-visible {
+    @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
   }
   .numbered-row .num {
     @apply font-mono text-[11px] uppercase tracking-label text-muted pt-1;
   }
   .numbered-row .body {
     @apply text-ink text-base md:text-lg leading-snug;
+  }
+  .numbered-row:hover .num,
+  .numbered-row:focus-visible .num,
+  .numbered-row:hover .body,
+  .numbered-row:focus-visible .body {
+    @apply text-paper;
+  }
+
+  .proof-strip {
+    @apply grid gap-4 py-5 md:grid-cols-3;
+  }
+  .proof-point {
+    @apply relative border border-rule bg-paper p-5 transition duration-200 ease-out outline-none;
+  }
+  .proof-point:hover,
+  .proof-point:focus-visible {
+    @apply z-10 -translate-y-1 scale-[1.03] border-navy-800 bg-navy-800 shadow-lg;
+  }
+  .proof-point-title {
+    @apply mb-2 font-mono text-[11px] uppercase tracking-label text-ink;
+  }
+  .proof-point-body {
+    @apply text-sm leading-relaxed text-muted;
+  }
+  .proof-point:hover .proof-point-title,
+  .proof-point:focus-visible .proof-point-title {
+    @apply text-paper;
+  }
+  .proof-point:hover .proof-point-body,
+  .proof-point:focus-visible .proof-point-body {
+    @apply text-paper/75;
+  }
+
+  .approach-step {
+    @apply relative grid grid-cols-[44px_1fr] gap-4 border border-rule bg-paper p-5 transition duration-200 ease-out outline-none;
+  }
+  .approach-step:hover,
+  .approach-step:focus-visible {
+    @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
+  }
+  .approach-step-num {
+    @apply pt-1 font-mono text-[11px] uppercase tracking-label text-muted;
+  }
+  .approach-step-title {
+    @apply mb-2 font-serif text-2xl leading-tight text-ink;
+  }
+  .approach-step-body {
+    @apply text-sm leading-relaxed text-muted;
+  }
+  .approach-step:hover .approach-step-num,
+  .approach-step:focus-visible .approach-step-num,
+  .approach-step:hover .approach-step-title,
+  .approach-step:focus-visible .approach-step-title {
+    @apply text-paper;
+  }
+  .approach-step:hover .approach-step-body,
+  .approach-step:focus-visible .approach-step-body {
+    @apply text-paper/75;
+  }
+  .hover-detail {
+    @apply mt-0 max-h-0 overflow-hidden text-sm leading-relaxed text-paper/75 opacity-0 transition-all duration-200 ease-out;
+  }
+  .proof-point:hover .hover-detail,
+  .proof-point:focus-visible .hover-detail,
+  .numbered-row:hover .hover-detail,
+  .numbered-row:focus-visible .hover-detail,
+  .approach-step:hover .hover-detail,
+  .approach-step:focus-visible .hover-detail {
+    @apply mt-3 max-h-48 opacity-100;
   }
 
   .step-card {
