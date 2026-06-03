@@ -11,9 +11,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   try {
     const meta = getCaseMeta(slug);
-    return { title: `${meta.title} — Tyne Works` };
+    const url = `/cases/${slug}`;
+    return {
+      title: meta.title,
+      description: meta.summary,
+      alternates: { canonical: url },
+      openGraph: {
+        type: "article",
+        url,
+        title: meta.title,
+        description: meta.summary,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: meta.title,
+        description: meta.summary,
+      },
+    };
   } catch {
-    return { title: "Case — Tyne Works" };
+    return { title: "Case" };
   }
 }
 

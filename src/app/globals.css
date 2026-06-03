@@ -204,6 +204,23 @@
     }
   }
 
+  /* Touch devices have no :hover — the active numbered-row already reveals via
+     scroll, but proof points and approach steps stay on paper, so reveal their
+     detail with a readable color instead of hiding it behind a hover. */
+  @media (hover: none) {
+    .proof-point .hover-detail,
+    .approach-step .hover-detail {
+      margin-top: 0.75rem;
+      max-height: 14rem;
+      opacity: 1;
+      color: theme(colors.muted);
+    }
+  }
+
+  .cases-hint {
+    @apply container-tight pb-5 flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-paper/55;
+  }
+
   .cases-scroller {
     @apply overflow-x-auto;
     scrollbar-width: thin;

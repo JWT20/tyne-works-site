@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 
-export const metadata = { title: "Contact — Tyne Works" };
+export const metadata = {
+  title: "Contact",
+  description:
+    "Plan een Discovery of een vrijblijvende AI-inspiratiesessie met Tyne Works. We brengen eerst je echte proces in kaart, daarna kijken we welke software of AI logisch is.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (
