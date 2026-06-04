@@ -64,10 +64,19 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
 }
 
 function CaseTestimonial({ client }: { client: string }) {
+  const logo =
+    client === "Wijn van Jurjen"
+      ? { src: "/cases/jurjen-logo.svg", alt: "Wijn van Jurjen logo" }
+      : null;
+
   return (
     <section className="case-testimonial" aria-label="Klantquote">
       <div className="case-testimonial-logo">
-        <span className="placeholder">Logo {client || "klant"}</span>
+        {logo ? (
+          <img src={logo.src} alt={logo.alt} className="case-testimonial-logo-image" />
+        ) : (
+          <span className="placeholder">Logo {client || "klant"}</span>
+        )}
       </div>
       <div>
         <p className="case-testimonial-quote">
