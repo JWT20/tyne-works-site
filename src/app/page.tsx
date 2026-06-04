@@ -35,7 +35,7 @@ export default function HomePage() {
               detail="Dat voorkomt mooie schermen die niet passen bij de praktijk. Uitzonderingen, overdrachten en beslismomenten worden eerst zichtbaar."
             />
             <ProofPoint
-              title="Licht maatwerk"
+              title="Maatwerk"
               body="Kleine, gerichte systemen rond bestaande tools en mensen."
               detail="Geen groot platform wanneer een slimme koppeling, dashboard of workflow genoeg is. Het systeem blijft compact en beheersbaar."
             />
@@ -66,7 +66,7 @@ export default function HomePage() {
             n: "03",
             body: "Groeien betekent nu nog meer handwerk, of generieker worden.",
             detail:
-              "Het doel is niet alles automatiseren, maar het handwerk verminderen zonder de eigen manier van werken kwijt te raken.",
+              "Het doel is processen te automatiseren en slimmer in te richten, met behoud van de eigen manier van werken.",
           },
           {
             n: "04",

@@ -27,7 +27,7 @@ export default function ContactPage() {
           </p>
           <Link
             href="mailto:jans.tigelaar@tyneworks.nl?subject=Discovery"
-            className="inline-flex items-center gap-2 bg-paper px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:bg-paper/90 transition w-fit"
+            className="mt-auto inline-flex items-center gap-2 bg-paper px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:bg-paper/90 transition w-fit"
           >
             Plan Discovery <ArrowRight className="h-4 w-4" />
           </Link>
@@ -37,13 +37,13 @@ export default function ContactPage() {
           <div className="step-label">Vrijblijvend</div>
           <div className="step-meta">45 minuten · gratis</div>
           <h2 className="step-title">AI-inspiratiesessie</h2>
-          <p className="text-muted leading-relaxed mb-6">
+          <p className="text-paper/75 leading-relaxed mb-6">
             In 45 minuten kijken we naar wat AI nu eigenlijk is, waar het wel en niet goed in is,
             welke risico&apos;s en governance erbij horen, en hoe je van idee naar praktijk komt.
           </p>
           <Link
             href="mailto:jans.tigelaar@tyneworks.nl?subject=AI-inspiratiesessie"
-            className="btn-ghost w-fit"
+            className="btn-ghost-light mt-auto w-fit"
           >
             Plan AI-sessie <ArrowRight className="h-4 w-4" />
           </Link>
