@@ -1,7 +1,6 @@
 ---
-title: "Van WhatsApp en dozenkennis naar een werkend voorraadsysteem"
-label: "Live"
-summary: "Een vision-systeem dat ongelabelde dozen herkent en koppelt aan orders — zodat het proces minder afhankelijk wordt van ervaring en handmatige controle."
+title: "Van WhatsApp en dozenkennis naar een overdraagbaar proces"
+summary: "Een vision-systeem dat ongelabelde dozen herkent en pakbonnen van wisselende leveranciers uitleest — zodat het proces minder afhankelijk wordt van ervaring en handmatige controle."
 client: "Breakaway Koeriers"
 date: "2025-09-01"
 ---
@@ -11,34 +10,41 @@ date: "2025-09-01"
 Het cross-docking proces draaide volledig op de kennis van één wijnhandelaar. Alleen hij wist
 welke ongelabelde dozen bij welke klantorders hoorden.
 
+Daarbovenop leverde elke leverancier zijn pakbon in een eigen format aan. Die moesten handmatig
+worden overgetypt voordat ze bruikbaar waren.
+
 Daardoor bleef een proces dat theoretisch uitbesteed kon worden in de praktijk afhankelijk van
 WhatsApp, geheugen en handmatige controle.
 
 ## De aanpak
 
-Voor Breakaway Koeriers bouwde ik een applicatie waarin telefooncamera, beeldherkenning,
-productdata, voorraad en orderregels samenkomen. De fietskoerier scant een doos met de telefoon.
-De app herkent het product op basis van referentiebeelden, toont de zekerheid en geeft direct
-aan voor welke klant of rolcontainer de doos bedoeld is.
+Voor Breakaway Koeriers bouwden we een applicatie waarin telefooncamera, beeldherkenning,
+productdata en orderregels samenkomen. De fietskoerier scant een doos met de telefoon. De app
+herkent het product op basis van referentiebeelden, toont de zekerheid en geeft direct aan voor
+welke klant of rolcontainer de doos bedoeld is.
 
-Bij twijfel vraagt de app om menselijke bevestiging. Als er nog geen referentiefoto bestaat, kan
-de scan direct als eerste referentie worden opgeslagen. Zo wordt het systeem tijdens het werk
-slimmer, zonder dat de operatie stilvalt.
+Pakbonnen van leveranciers worden ingelezen ongeacht de opmaak, zodat handmatig overtypen
+vervalt.
+
+De app vraagt altijd om bevestiging voordat een resultaat wordt vastgelegd. Daarbij is elke stap
+van de AI inzichtelijk: er wordt meegekeken hoe beslissingen tot stand komen, zodat het systeem
+geen zwarte doos is en gericht kan worden bijgestuurd.
 
 ## Wat AI hier doet
 
-AI helpt bij het herkennen van variabele input — zoals dozen, pakbonnen en facturen. De
-applicatie vertaalt die input daarna naar concrete acties:
+AI helpt bij het herkennen van variabele input. Twee dingen vooral:
 
-- klanttoewijzing
-- voorraadmutaties
-- ordercontrole
-- menselijke bevestiging bij twijfel
+- **Dozen herkennen.** De app herkent een product op basis van referentiebeelden, toont de
+  zekerheid en legt het resultaat voor aan de gebruiker ter bevestiging.
+- **Pakbonnen lezen.** Leveranciers leveren elk in hun eigen format aan. Die pakbonnen moesten
+  vroeger handmatig overgetypt worden; AI leest ze nu uit, ongeacht de opmaak.
 
-AI vangt variatie op. De software bewaakt het proces.
+AI vangt de variatie op. De rest van het proces — toewijzing, controle — loopt volgens vaste regels.
 
 ## Resultaat
 
 Een fietskoerier kan het cross-docking proces nu zelfstandig uitvoeren met beperkte training.
 Daardoor werd een proces dat volledig afhankelijk was van ervaring overdraagbaar, controleerbaar
 en schaalbaar.
+
+De picktijd per order is met 60% afgenomen ten opzichte van de eerdere werkwijze.
