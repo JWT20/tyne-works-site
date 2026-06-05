@@ -306,6 +306,9 @@
   .case-testimonial-logo {
     @apply flex items-center justify-center border border-dashed border-rule aspect-[3/2] text-muted;
   }
+  .case-testimonial-logo-image {
+    @apply h-auto w-full max-w-[150px];
+  }
   .case-testimonial-logo .placeholder {
     @apply font-mono text-[10px] uppercase tracking-label;
   }
