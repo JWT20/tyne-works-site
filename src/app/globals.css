@@ -143,9 +143,11 @@
   .numbered-row {
     @apply relative mb-3 grid cursor-default grid-cols-[44px_1fr] gap-4 border border-rule bg-paper p-5 transition duration-200 ease-out outline-none last:mb-0;
   }
-  .numbered-row:hover,
-  .numbered-row:active {
-    @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
+  @media (max-width: 767.98px) {
+    .numbered-row:hover,
+    .numbered-row:active {
+      @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
+    }
   }
   @media (min-width: 768px) {
     .numbered-row {
@@ -165,11 +167,13 @@
   .numbered-row .body {
     @apply font-serif text-2xl leading-tight text-ink md:font-sans md:text-lg md:leading-snug;
   }
-  .numbered-row:hover .num,
-  .numbered-row:active .num,
-  .numbered-row:hover .body,
-  .numbered-row:active .body {
-    @apply text-paper;
+  @media (max-width: 767.98px) {
+    .numbered-row:hover .num,
+    .numbered-row:active .num,
+    .numbered-row:hover .body,
+    .numbered-row:active .body {
+      @apply text-paper;
+    }
   }
   @media (min-width: 768px) {
     .numbered-row.is-active .num,
@@ -241,25 +245,19 @@
   }
   .proof-point:hover .hover-detail,
   .proof-point:focus-visible .hover-detail,
-  .numbered-row:hover .hover-detail,
-  .numbered-row:focus .hover-detail,
-  .numbered-row:active .hover-detail,
-  .numbered-row:focus-visible .hover-detail,
   .approach-step:hover .hover-detail,
   .approach-step:focus-visible .hover-detail {
     @apply mt-3 opacity-100 md:grid-rows-[1fr];
     max-height: 12rem;
   }
-  .numbered-row:hover .hover-detail,
-  .numbered-row:focus .hover-detail,
-  .numbered-row:active .hover-detail,
-  .numbered-row:focus-visible .hover-detail {
-    @apply text-paper/75;
+  @media (max-width: 767.98px) {
+    .numbered-row:hover .hover-detail,
+    .numbered-row:active .hover-detail {
+      @apply text-paper/75;
+    }
   }
   @media (min-width: 768px) {
-    .numbered-row.is-active .hover-detail,
-    .numbered-row:focus .hover-detail,
-    .numbered-row:focus-visible .hover-detail {
+    .numbered-row.is-active .hover-detail {
       @apply mt-3 opacity-100 md:grid-rows-[1fr];
       max-height: 12rem;
     }
