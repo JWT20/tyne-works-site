@@ -12,7 +12,10 @@
     @apply font-sans;
     caret-color: transparent;
   }
-  body :where(a, p, h1, h2, h3, span, div) {
+  body {
+    user-select: text;
+  }
+  :where(button, [role="button"], nav, nav *, [aria-hidden="true"], .btn-primary, .btn-ghost, .btn-ghost-light, .crisp-launcher, .hero-grid, .cases-hint, .case-card-link) {
     user-select: none;
   }
   input,
