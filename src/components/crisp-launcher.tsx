@@ -29,12 +29,20 @@ function loadCrisp() {
 
 export function CrispLauncher() {
   const [isLoading, setIsLoading] = useState(false);
+  const [hasOpenedChat, setHasOpenedChat] = useState(false);
 
   function openChat() {
     setIsLoading(true);
     loadCrisp();
     window.$crisp?.push(["do", "chat:open"]);
-    window.setTimeout(() => setIsLoading(false), 1200);
+    window.setTimeout(() => {
+      setIsLoading(false);
+      setHasOpenedChat(true);
+    }, 1200);
+  }
+
+  if (hasOpenedChat) {
+    return null;
   }
 
   return (
