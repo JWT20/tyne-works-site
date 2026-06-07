@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { getCaseSlugs, getCaseMeta } from "@/lib/cases";
 
@@ -68,9 +67,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
         <p className="text-lg text-muted leading-relaxed md:pt-3">{meta!.summary}</p>
       </header>
 
-      <CaseTestimonial client={meta!.client ?? ""} />
-
-      {slug === "breakaway-koeriers-dozen-app" && <CrossDockingVisuals />}
+      <CaseLogo client={meta!.client ?? ""} />
 
       <div className="case-detail-prose">
         <MDXContent />
@@ -79,66 +76,21 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   );
 }
 
-function CaseTestimonial({ client }: { client: string }) {
+function CaseLogo({ client }: { client: string }) {
   const logo =
     client === "Wijn van Jurjen"
       ? { src: "/cases/jurjen-logo.svg", alt: "Wijn van Jurjen logo" }
+      : client === "Breakaway Koeriers"
+        ? { src: "/cases/breakaway-logo.svg", alt: "Breakaway Koeriers logo" }
       : null;
 
-  return (
-    <section className="case-testimonial" aria-label="Klantquote">
-      <div className="case-testimonial-logo">
-        {logo ? (
-          <img src={logo.src} alt={logo.alt} className="case-testimonial-logo-image" />
-        ) : (
-          <span className="placeholder">Logo {client || "klant"}</span>
-        )}
-      </div>
-      <div>
-        <p className="case-testimonial-quote">
-          Quote van de klant komt hier — een korte, krachtige uitspraak over wat het heeft
-          opgeleverd.
-        </p>
-        <p className="case-testimonial-attribution">Naam · Rol · {client || "Bedrijf"}</p>
-      </div>
-    </section>
-  );
-}
+  if (!logo) {
+    return null;
+  }
 
-function CrossDockingVisuals() {
   return (
-    <section className="case-visual-block" aria-label="Screenshots van de cross-docking app">
-      <div className="case-visual-main">
-        <div className="case-visual-label">Scan & Boek</div>
-        <Image
-          src="/cases/mobile-scan.png"
-          alt="Mobiele scanflow waarin een doos met de camera wordt herkend"
-          width={1170}
-          height={2532}
-          className="case-mobile-image"
-        />
-        <p>
-          De koerier scant een doos met de telefoon. De app koppelt de scan aan order, voorraad en
-          klanttoewijzing.
-        </p>
-      </div>
-
-      <div className="case-visual-side">
-        <div className="case-shot">
-          <div className="case-visual-label">Inbound extractie</div>
-          <Image
-            src="/cases/inbound-extraction.png"
-            alt="Inbound scherm waarin een pakbon is omgezet naar geëxtraheerde regels"
-            width={2940}
-            height={1912}
-            className="case-inbound-image"
-          />
-          <p>
-            Een pakbonfoto wordt omgezet naar productregels, aantallen, supplier codes en
-            controlepunten.
-          </p>
-        </div>
-      </div>
+    <section className="case-logo-strip" aria-label={`${client} logo`}>
+      <img src={logo.src} alt={logo.alt} className="case-logo-strip-image" />
     </section>
   );
 }

@@ -156,21 +156,6 @@ export default function HomePage() {
               We richten ons op het deel van een proces dat handmatig gaat of buiten
               bestaande systemen valt.
             </p>
-
-            <div className="portraits-grid mt-10">
-              <div className="portrait">
-                <div className="portrait-frame">
-                  <span className="placeholder">Portret Jans Tigelaar</span>
-                </div>
-                <p className="portrait-caption">Jans Tigelaar - oprichter</p>
-              </div>
-              <div className="portrait">
-                <div className="portrait-frame">
-                  <span className="placeholder">Portret Stijn Verhoeff</span>
-                </div>
-                <p className="portrait-caption">Stijn Verhoeff - data analytics</p>
-              </div>
-            </div>
           </div>
           <div className="info-card">
             <p className="label mb-5">Aan de slag</p>
