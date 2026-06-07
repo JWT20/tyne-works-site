@@ -284,91 +284,11 @@
     @apply max-w-prose;
   }
 
-  .portraits-grid {
-    @apply grid max-w-xl gap-6 sm:grid-cols-2;
+  .case-logo-strip {
+    @apply mb-12 flex items-center border border-rule bg-paper p-6 md:p-8;
   }
-  .portrait {
-    @apply max-w-[280px];
-  }
-  .portrait-frame {
-    @apply flex items-center justify-center border border-dashed border-rule aspect-[4/5] text-muted bg-paper;
-  }
-  .portrait-frame .placeholder {
-    @apply font-mono text-[10px] uppercase tracking-label text-muted;
-  }
-  .portrait-caption {
-    @apply mt-3 font-mono text-[11px] uppercase tracking-label text-muted;
+  .case-logo-strip-image {
+    @apply h-auto w-full max-w-[180px];
   }
 
-  .case-testimonial {
-    @apply border border-rule bg-paper grid gap-8 md:grid-cols-[180px_1fr] items-center p-8 md:p-10 mb-12;
-  }
-  .case-testimonial-logo {
-    @apply flex items-center justify-center border border-dashed border-rule aspect-[3/2] text-muted;
-  }
-  .case-testimonial-logo-image {
-    @apply h-auto w-full max-w-[150px];
-  }
-  .case-testimonial-logo .placeholder {
-    @apply font-mono text-[10px] uppercase tracking-label;
-  }
-  .case-testimonial-quote {
-    @apply font-serif text-2xl md:text-[1.75rem] leading-snug text-ink;
-  }
-  .case-testimonial-quote::before {
-    content: "\201C";
-    @apply mr-1 text-accent;
-  }
-  .case-testimonial-quote::after {
-    content: "\201D";
-    @apply ml-1 text-accent;
-  }
-  .case-testimonial-attribution {
-    @apply mt-5 font-mono text-[11px] uppercase tracking-label text-muted;
-  }
-
-  .case-visual-block {
-    @apply mb-12 grid gap-5 md:grid-cols-[0.82fr_1.18fr];
-  }
-  .case-visual-main,
-  .case-shot,
-  .case-flow-card {
-    @apply overflow-hidden border border-rule bg-paper;
-  }
-  .case-visual-main {
-    @apply p-4;
-  }
-  .case-visual-side {
-    @apply grid gap-5;
-  }
-  .case-visual-label {
-    @apply mb-3 font-mono text-[11px] uppercase tracking-label text-muted;
-  }
-  .case-mobile-image {
-    @apply h-[520px] w-full border border-rule object-cover;
-    object-position: center 8%;
-  }
-  .case-inbound-image {
-    @apply h-72 w-full border-y border-rule object-cover;
-    object-position: center 22%;
-  }
-  .case-visual-main p,
-  .case-shot p {
-    @apply mt-4 text-sm text-muted;
-  }
-  .case-flow-card {
-    @apply p-5;
-  }
-  .case-flow-step {
-    @apply flex items-center gap-3 border border-rule bg-paper px-4 py-3 text-sm font-medium text-ink;
-  }
-  .case-flow-step svg {
-    @apply shrink-0 text-ink;
-  }
-  .case-flow-arrow {
-    @apply mx-auto my-2 h-5 w-5 text-ink/40;
-  }
-  .case-flow-footer {
-    @apply mt-4 flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-muted;
-  }
 }
