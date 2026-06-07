@@ -31,6 +31,12 @@ npm run build
 
 De statische output staat in `out/`.
 
+## Analytics
+
+PostHog wordt pas geladen nadat een bezoeker analytische cookies accepteert. Zet
+`NEXT_PUBLIC_POSTHOG_KEY` en eventueel `NEXT_PUBLIC_POSTHOG_HOST` op basis van
+`.env.example`.
+
 ## Structuur
 
 ```text
@@ -76,4 +82,3 @@ De case verschijnt automatisch op `/cases` en op `/cases/<bestandsnaam>`.
 - Echte agenda-link of boekingslink toevoegen zodra die beschikbaar is.
 - Eventueel één screenshot of schets toevoegen aan de cross-docking case.
 - Domein `tyneworks.nl` registreren en koppelen.
-- Analytics toevoegen, bijvoorbeeld Plausible.
