@@ -152,9 +152,11 @@ export default function HomePage() {
               We maken impliciete bedrijfskennis operationeel schaalbaar.
             </h2>
             <p className="text-muted text-lg leading-relaxed max-w-prose">
-              Tyne Works bouwt lichte software op maat voor specifieke bedrijfsprocessen.
-              We richten ons op het deel van een proces dat handmatig gaat of buiten
-              bestaande systemen valt.
+              Tyne Works is het werk van Jans Tigelaar en Stijn Verhoeff, gevestigd in
+              Groningen. Voor groeiende bedrijven waar werk vastloopt tussen
+              standaardsoftware, spreadsheets, WhatsApp, losse documenten en handmatige
+              overdracht bouwen we lichte software op maat voor specifieke
+              bedrijfsprocessen.
             </p>
           </div>
           <div className="info-card">
