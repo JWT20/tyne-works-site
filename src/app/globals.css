@@ -141,6 +141,8 @@
     @apply relative mb-3 grid grid-cols-[44px_1fr] gap-4 border border-rule bg-paper p-5 transition duration-200 ease-out outline-none last:mb-0;
   }
   .numbered-row:hover,
+  .numbered-row:focus,
+  .numbered-row:active,
   .numbered-row:focus-visible {
     @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
   }
@@ -153,6 +155,7 @@
       font-size: 1rem;
     }
     .numbered-row.is-active,
+    .numbered-row:focus,
     .numbered-row:focus-visible {
       @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
     }
@@ -164,15 +167,21 @@
     @apply font-serif text-2xl leading-tight text-ink md:font-sans md:text-lg md:leading-snug;
   }
   .numbered-row:hover .num,
+  .numbered-row:focus .num,
+  .numbered-row:active .num,
   .numbered-row:focus-visible .num,
   .numbered-row:hover .body,
+  .numbered-row:focus .body,
+  .numbered-row:active .body,
   .numbered-row:focus-visible .body {
     @apply text-paper;
   }
   @media (min-width: 768px) {
     .numbered-row.is-active .num,
+    .numbered-row:focus .num,
     .numbered-row:focus-visible .num,
     .numbered-row.is-active .body,
+    .numbered-row:focus .body,
     .numbered-row:focus-visible .body {
       @apply text-paper;
     }
@@ -242,6 +251,8 @@
   .proof-point:hover .hover-detail,
   .proof-point:focus-visible .hover-detail,
   .numbered-row:hover .hover-detail,
+  .numbered-row:focus .hover-detail,
+  .numbered-row:active .hover-detail,
   .numbered-row:focus-visible .hover-detail,
   .approach-step:hover .hover-detail,
   .approach-step:focus-visible .hover-detail {
@@ -249,11 +260,14 @@
     max-height: 12rem;
   }
   .numbered-row:hover .hover-detail,
+  .numbered-row:focus .hover-detail,
+  .numbered-row:active .hover-detail,
   .numbered-row:focus-visible .hover-detail {
     @apply text-paper/75;
   }
   @media (min-width: 768px) {
     .numbered-row.is-active .hover-detail,
+    .numbered-row:focus .hover-detail,
     .numbered-row:focus-visible .hover-detail {
       @apply mt-3 opacity-100 md:grid-rows-[1fr];
       max-height: 12rem;
@@ -289,7 +303,7 @@
   }
 
   .cases-scroller {
-    @apply overflow-visible md:overflow-x-auto;
+    @apply overflow-x-auto;
     scrollbar-width: thin;
     scrollbar-color: theme(colors.paper / 30%) transparent;
   }
@@ -304,21 +318,12 @@
     border-radius: 3px;
   }
   .cases-scroller-track {
-    @apply mx-auto grid max-w-6xl gap-4 px-6 pb-4 md:flex md:gap-6;
-    width: auto;
+    @apply mx-auto flex max-w-6xl gap-4 px-6 pb-4 md:gap-6;
+    width: max-content;
   }
   .case-card {
-    @apply block w-full border border-paper/15 p-6 transition hover:border-paper/40 md:flex-shrink-0 md:p-8;
-    width: 100%;
-  }
-  @media (min-width: 768px) {
-    .cases-scroller-track {
-      max-width: calc(72rem);
-      width: max-content;
-    }
-    .case-card {
-      width: min(420px, 85vw);
-    }
+    @apply block flex-shrink-0 border border-paper/15 p-6 transition hover:border-paper/40 md:p-8;
+    width: min(420px, 85vw);
   }
   .case-card .case-card-meta {
     @apply font-mono text-[11px] uppercase tracking-label text-paper/55 mb-5 flex items-center gap-3;
