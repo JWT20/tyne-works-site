@@ -1,6 +1,7 @@
 import posthog from "posthog-js";
 
-const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+const posthogKey =
+  process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "phc_AJxk8NJtcUWsMAbYm9CSpbwPYxv3icBQUwAxN9a66QzL";
 const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://eu.i.posthog.com";
 
 let isPostHogReady = false;
@@ -33,4 +34,3 @@ export function capturePageView(url: string) {
 
   posthog.capture("$pageview", { $current_url: url });
 }
-
