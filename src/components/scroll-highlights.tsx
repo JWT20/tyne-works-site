@@ -64,8 +64,6 @@ export function ScrollHighlights({ items }: ScrollHighlightsProps) {
               <div
                 key={item.n}
                 className={`numbered-row ${index === activeIndex ? "is-active" : ""}`}
-                onClick={(event) => event.currentTarget.focus()}
-                tabIndex={0}
               >
                 <div className="num">{item.n}</div>
                 <div>

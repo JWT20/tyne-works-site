@@ -120,7 +120,7 @@ export default function HomePage() {
             Software voor processen tussen mensen en systemen.
           </h2>
         </div>
-        {cases.length > 1 && (
+        {cases.length > 3 && (
           <p className="cases-hint" aria-hidden>
             Sleep opzij voor meer <ArrowRight className="h-3.5 w-3.5" />
           </p>
