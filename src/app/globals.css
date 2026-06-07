@@ -12,9 +12,6 @@
     @apply font-sans;
     caret-color: transparent;
   }
-  body :where(a, p, h1, h2, h3, span, div) {
-    user-select: none;
-  }
   input,
   textarea {
     caret-color: auto;
