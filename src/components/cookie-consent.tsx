@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Check, X } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { capturePageView, initPostHog } from "@/lib/posthog";
 
@@ -82,6 +83,13 @@ export function CookieConsent() {
                 onderdeel hiervan kunnen we sessies opnemen. Invoervelden worden standaard
                 gemaskeerd om gevoelige gegevens te beschermen. We gebruiken PostHog via de
                 EU-regio.
+              </p>
+              <p>
+                Meer informatie staat in onze{" "}
+                <Link href="/privacy" className="text-ink underline underline-offset-4">
+                  privacy- en cookieverklaring
+                </Link>
+                .
               </p>
             </div>
           </div>
