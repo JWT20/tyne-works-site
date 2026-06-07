@@ -303,7 +303,7 @@
   }
 
   .cases-scroller {
-    @apply overflow-visible md:overflow-x-auto;
+    @apply overflow-x-auto;
     scrollbar-width: thin;
     scrollbar-color: theme(colors.paper / 30%) transparent;
   }
@@ -318,21 +318,12 @@
     border-radius: 3px;
   }
   .cases-scroller-track {
-    @apply mx-auto grid max-w-6xl gap-4 px-6 pb-4 md:flex md:gap-6;
-    width: auto;
+    @apply mx-auto flex max-w-6xl gap-4 px-6 pb-4 md:gap-6;
+    width: max-content;
   }
   .case-card {
-    @apply block w-full border border-paper/15 p-6 transition hover:border-paper/40 md:flex-shrink-0 md:p-8;
-    width: 100%;
-  }
-  @media (min-width: 768px) {
-    .cases-scroller-track {
-      max-width: calc(72rem);
-      width: max-content;
-    }
-    .case-card {
-      width: min(420px, 85vw);
-    }
+    @apply block flex-shrink-0 border border-paper/15 p-6 transition hover:border-paper/40 md:p-8;
+    width: min(420px, 85vw);
   }
   .case-card .case-card-meta {
     @apply font-mono text-[11px] uppercase tracking-label text-paper/55 mb-5 flex items-center gap-3;
