@@ -74,6 +74,28 @@
   .btn-ghost {
     @apply inline-flex items-center gap-2 border border-ink/30 px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:border-ink transition;
   }
+  .btn-ghost-light {
+    @apply inline-flex items-center gap-2 border border-paper/40 px-5 py-3 text-paper font-mono text-xs uppercase tracking-label hover:border-paper transition;
+  }
+
+  .step-card {
+    @apply flex flex-col border border-navy-800 bg-navy-800 p-6 md:p-7 text-paper;
+  }
+  .step-card.is-primary {
+    @apply border-accent;
+  }
+  .step-label {
+    @apply mb-1 font-mono text-[11px] uppercase tracking-label text-paper/55;
+  }
+  .step-card.is-primary .step-label {
+    @apply text-accent;
+  }
+  .step-meta {
+    @apply mb-3 font-mono text-[11px] text-paper/45;
+  }
+  .step-title {
+    @apply mb-4 font-serif text-3xl leading-tight text-paper;
+  }
 
   .info-card {
     @apply border border-rule bg-paper p-6 md:p-7;
@@ -283,6 +305,9 @@
   }
   .case-testimonial-logo {
     @apply flex items-center justify-center border border-dashed border-rule aspect-[3/2] text-muted;
+  }
+  .case-testimonial-logo-image {
+    @apply h-auto w-full max-w-[150px];
   }
   .case-testimonial-logo .placeholder {
     @apply font-mono text-[10px] uppercase tracking-label;
