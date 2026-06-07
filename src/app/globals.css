@@ -346,6 +346,14 @@
   .case-detail-prose {
     @apply max-w-prose;
   }
+  .case-detail-header {
+    min-width: 0;
+  }
+  .case-detail-title {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
 
   .case-logo-strip {
     @apply mb-12 flex items-center border border-rule bg-paper p-6 md:p-8;

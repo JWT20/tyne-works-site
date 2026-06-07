@@ -49,7 +49,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   }
 
   return (
-    <article className="container-tight py-20">
+    <article className="container-tight overflow-hidden py-20">
       <Link
         href="/"
         className="font-mono text-[11px] uppercase tracking-label text-muted hover:text-ink"
@@ -57,14 +57,14 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
         ← Tyne Works
       </Link>
 
-      <header className="mt-10 grid gap-10 md:grid-cols-[1.2fr_1fr] md:gap-16 items-start border-b border-rule pb-12 mb-12">
-        <div>
+      <header className="case-detail-header mt-10 grid gap-10 md:grid-cols-[1.2fr_1fr] md:gap-16 items-start border-b border-rule pb-12 mb-12">
+        <div className="min-w-0">
           <div className="flex items-center gap-3 mb-6">
             <span className="label">{meta!.client ?? "Tyne Works"}</span>
           </div>
-          <h1 className="display-1">{meta!.title}</h1>
+          <h1 className="case-detail-title display-1">{meta!.title}</h1>
         </div>
-        <p className="text-lg text-muted leading-relaxed md:pt-3">{meta!.summary}</p>
+        <p className="min-w-0 text-lg text-muted leading-relaxed md:pt-3">{meta!.summary}</p>
       </header>
 
       <CaseLogo client={meta!.client ?? ""} />
