@@ -12,7 +12,10 @@
     @apply font-sans;
     caret-color: transparent;
   }
-  body :where(a, p, h1, h2, h3, span, div) {
+  body {
+    user-select: text;
+  }
+  :where(button, [role="button"], nav, nav *, [aria-hidden="true"], .btn-primary, .btn-ghost, .btn-ghost-light, .crisp-launcher, .hero-grid, .cases-hint, .case-card-link) {
     user-select: none;
   }
   input,
@@ -327,6 +330,17 @@
   .case-card {
     @apply block snap-start border border-paper/15 p-6 transition hover:border-paper/40 md:p-8;
     flex: 0 0 min(420px, 85vw);
+  }
+  @media (min-width: 768px) {
+    .cases-scroller {
+      scroll-snap-type: none;
+    }
+    .cases-scroller-track {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 72rem;
+      min-width: 0;
+    }
   }
   .case-card .case-card-meta {
     @apply font-mono text-[11px] uppercase tracking-label text-paper/55 mb-5 flex items-center gap-3;
