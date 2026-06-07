@@ -78,6 +78,23 @@
     @apply inline-flex items-center gap-2 border border-paper/40 px-5 py-3 text-paper font-mono text-xs uppercase tracking-label hover:border-paper transition;
   }
 
+  .crisp-launcher {
+    @apply fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 border border-ink/20 bg-ink px-4 py-3 font-mono text-[11px] uppercase tracking-label text-paper shadow-lg transition hover:bg-navy-800;
+  }
+
+  .privacy-prose {
+    @apply grid max-w-prose gap-10;
+  }
+  .privacy-prose h2 {
+    @apply mb-3 font-serif text-3xl leading-tight text-ink;
+  }
+  .privacy-prose p {
+    @apply mb-4 text-base leading-relaxed text-muted;
+  }
+  .privacy-prose a {
+    @apply text-ink underline underline-offset-4 hover:text-accent;
+  }
+
   .step-card {
     @apply flex flex-col border border-navy-800 bg-navy-800 p-6 md:p-7 text-paper;
   }

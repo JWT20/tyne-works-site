@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-rule bg-paper mt-20">
@@ -13,9 +15,17 @@ export function SiteFooter() {
             Software en AI voor processen die niet standaard zijn.
           </p>
         </div>
-        <div>
-          <p className="label mb-3">Contact</p>
-          <p className="text-sm text-ink">jans.tigelaar@tyneworks.nl</p>
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <p className="label mb-3">Contact</p>
+            <p className="text-sm text-ink">jans.tigelaar@tyneworks.nl</p>
+          </div>
+          <div>
+            <p className="label mb-3">Info</p>
+            <Link href="/privacy" className="text-sm text-ink hover:text-accent">
+              Privacy & cookies
+            </Link>
+          </div>
         </div>
       </div>
       <div className="border-t border-rule">
