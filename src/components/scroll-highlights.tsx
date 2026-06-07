@@ -18,6 +18,7 @@ export function ScrollHighlights({ items }: ScrollHighlightsProps) {
 
   useEffect(() => {
     let frame = 0;
+    const desktopQuery = window.matchMedia("(min-width: 768px)");
 
     function updateActiveIndex() {
       if (!sectionRef.current) return;
@@ -30,11 +31,16 @@ export function ScrollHighlights({ items }: ScrollHighlightsProps) {
     }
 
     function onScroll() {
+      if (!desktopQuery.matches) return;
+
       window.cancelAnimationFrame(frame);
       frame = window.requestAnimationFrame(updateActiveIndex);
     }
 
-    updateActiveIndex();
+    if (desktopQuery.matches) {
+      updateActiveIndex();
+    }
+
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
 

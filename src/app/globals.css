@@ -148,10 +148,10 @@
     .numbered-row .body {
       font-size: 1rem;
     }
-  }
-  .numbered-row.is-active,
-  .numbered-row:focus-visible {
-    @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
+    .numbered-row.is-active,
+    .numbered-row:focus-visible {
+      @apply z-10 -translate-y-1 scale-[1.02] border-navy-800 bg-navy-800 shadow-lg;
+    }
   }
   .numbered-row .num {
     @apply font-mono text-[11px] uppercase tracking-label text-muted pt-1;
@@ -159,11 +159,13 @@
   .numbered-row .body {
     @apply text-ink text-base md:text-lg leading-snug;
   }
-  .numbered-row.is-active .num,
-  .numbered-row:focus-visible .num,
-  .numbered-row.is-active .body,
-  .numbered-row:focus-visible .body {
-    @apply text-paper;
+  @media (min-width: 768px) {
+    .numbered-row.is-active .num,
+    .numbered-row:focus-visible .num,
+    .numbered-row.is-active .body,
+    .numbered-row:focus-visible .body {
+      @apply text-paper;
+    }
   }
 
   .proof-strip {
@@ -221,16 +223,25 @@
     @apply mt-0 overflow-hidden text-sm leading-relaxed text-paper/75 opacity-0 transition-all duration-200 ease-out md:grid md:grid-rows-[0fr] md:overflow-visible;
     max-height: 0;
   }
+  .numbered-row .hover-detail {
+    margin-top: 0.75rem;
+    max-height: 14rem;
+    opacity: 1;
+    color: theme(colors.muted);
+  }
   .proof-point:hover .hover-detail,
   .proof-point:focus-visible .hover-detail,
-  .numbered-row.is-active .hover-detail,
-  .numbered-row:focus-visible .hover-detail,
   .approach-step:hover .hover-detail,
   .approach-step:focus-visible .hover-detail {
     @apply mt-3 opacity-100 md:grid-rows-[1fr];
     max-height: 12rem;
   }
   @media (min-width: 768px) {
+    .numbered-row.is-active .hover-detail,
+    .numbered-row:focus-visible .hover-detail {
+      @apply mt-3 opacity-100 md:grid-rows-[1fr];
+      max-height: 12rem;
+    }
     .numbered-row .hover-detail {
       margin-top: 0.5rem;
       grid-template-rows: 1fr;
@@ -247,6 +258,7 @@
      scroll, but proof points and approach steps stay on paper, so reveal their
      detail with a readable color instead of hiding it behind a hover. */
   @media (hover: none) {
+    .numbered-row .hover-detail,
     .proof-point .hover-detail,
     .approach-step .hover-detail {
       margin-top: 0.75rem;
@@ -257,11 +269,11 @@
   }
 
   .cases-hint {
-    @apply container-tight pb-5 flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-paper/55;
+    @apply container-tight hidden pb-5 items-center gap-2 font-mono text-[11px] uppercase tracking-label text-paper/55 md:flex;
   }
 
   .cases-scroller {
-    @apply overflow-x-auto;
+    @apply overflow-visible md:overflow-x-auto;
     scrollbar-width: thin;
     scrollbar-color: theme(colors.paper / 30%) transparent;
   }
@@ -276,19 +288,29 @@
     border-radius: 3px;
   }
   .cases-scroller-track {
-    @apply mx-auto flex gap-6 px-6 pb-4;
-    max-width: calc(72rem);
-    width: max-content;
+    @apply mx-auto grid max-w-6xl gap-4 px-6 pb-4 md:flex md:gap-6;
+    width: auto;
   }
   .case-card {
-    @apply block border border-paper/15 p-7 md:p-8 hover:border-paper/40 transition flex-shrink-0;
-    width: min(420px, 85vw);
+    @apply block w-full border border-paper/15 p-6 transition hover:border-paper/40 md:flex-shrink-0 md:p-8;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .cases-scroller-track {
+      max-width: calc(72rem);
+      width: max-content;
+    }
+    .case-card {
+      width: min(420px, 85vw);
+    }
   }
   .case-card .case-card-meta {
     @apply font-mono text-[11px] uppercase tracking-label text-paper/55 mb-5 flex items-center gap-3;
   }
   .case-card .case-card-title {
     @apply font-serif text-2xl md:text-3xl text-paper mb-3 leading-tight;
+    overflow-wrap: anywhere;
+    hyphens: auto;
   }
   .case-card .case-card-summary {
     @apply text-paper/75 text-sm leading-relaxed mb-6 max-w-md;
