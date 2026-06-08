@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { getCaseSlugs, getCaseMeta, getAdjacentCases } from "@/lib/cases";
 
+const siteUrl = "https://tyneworks.nl";
+
 export function generateStaticParams() {
   return getCaseSlugs().map((slug) => ({ slug }));
 }
@@ -51,8 +53,37 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
 
   const { prev, next } = getAdjacentCases(slug);
 
+  const caseUrl = `${siteUrl}/cases/${slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: meta!.title,
+    description: meta!.summary,
+    ...(meta!.date ? { datePublished: meta!.date } : {}),
+    author: { "@type": "Organization", name: "Tyne Works" },
+    publisher: { "@type": "Organization", name: "Tyne Works", url: siteUrl },
+    mainEntityOfPage: { "@type": "WebPage", "@id": caseUrl },
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Cases", item: `${siteUrl}/#cases` },
+      { "@type": "ListItem", position: 3, name: meta!.title, item: caseUrl },
+    ],
+  };
+
   return (
     <article className="container-tight overflow-hidden py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Link
         href="/#cases"
         className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-muted transition hover:text-accent"
