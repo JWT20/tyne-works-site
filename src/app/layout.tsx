@@ -31,7 +31,7 @@ const siteDescription =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Tyne Works — Lichte software op maat",
+    default: "Tyne Works — Software & AI voor bedrijfsspecifieke processen",
     template: "%s — Tyne Works",
   },
   description: siteDescription,
@@ -43,12 +43,12 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: siteUrl,
     siteName: "Tyne Works",
-    title: "Tyne Works — Lichte software op maat",
+    title: "Tyne Works — Software & AI voor bedrijfsspecifieke processen",
     description: siteDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tyne Works — Lichte software op maat",
+    title: "Tyne Works — Software & AI voor bedrijfsspecifieke processen",
     description: siteDescription,
   },
 };
