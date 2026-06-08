@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getCaseSlugs } from "@/lib/cases";
+import { getAllCases } from "@/lib/cases";
 
 const siteUrl = "https://tyneworks.nl";
 
@@ -13,9 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1 : 0.8,
   }));
 
-  const caseRoutes = getCaseSlugs().map((slug) => ({
-    url: `${siteUrl}/cases/${slug}`,
-    lastModified: new Date(),
+  const caseRoutes = getAllCases().map((c) => ({
+    url: `${siteUrl}/cases/${c.slug}`,
+    lastModified: c.date ? new Date(c.date) : new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

@@ -368,4 +368,22 @@
     @apply h-auto w-full max-w-[180px];
   }
 
+  .case-nav {
+    @apply mt-16 grid grid-cols-2 gap-6 border-t border-rule pt-8;
+  }
+  .case-nav-link {
+    @apply flex flex-col gap-1.5 transition;
+  }
+  .case-nav-next {
+    @apply items-end text-right;
+  }
+  .case-nav-dir {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-muted transition;
+  }
+  .case-nav-link:hover .case-nav-dir {
+    @apply text-accent;
+  }
+  .case-nav-title {
+    @apply font-serif text-lg leading-tight text-ink md:text-xl;
+  }
 }

@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getCaseSlugs, getCaseMeta } from "@/lib/cases";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { getCaseSlugs, getCaseMeta, getAdjacentCases } from "@/lib/cases";
+
+const siteUrl = "https://tyneworks.nl";
 
 export function generateStaticParams() {
   return getCaseSlugs().map((slug) => ({ slug }));
@@ -48,13 +51,44 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
+  const { prev, next } = getAdjacentCases(slug);
+
+  const caseUrl = `${siteUrl}/cases/${slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: meta!.title,
+    description: meta!.summary,
+    ...(meta!.date ? { datePublished: meta!.date } : {}),
+    author: { "@type": "Organization", name: "Tyne Works" },
+    publisher: { "@type": "Organization", name: "Tyne Works", url: siteUrl },
+    mainEntityOfPage: { "@type": "WebPage", "@id": caseUrl },
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Cases", item: `${siteUrl}/#cases` },
+      { "@type": "ListItem", position: 3, name: meta!.title, item: caseUrl },
+    ],
+  };
+
   return (
     <article className="container-tight overflow-hidden py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Link
-        href="/"
-        className="font-mono text-[11px] uppercase tracking-label text-muted hover:text-ink"
+        href="/#cases"
+        className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-label text-muted transition hover:text-accent"
       >
-        ← Tyne Works
+        <ArrowLeft className="h-3.5 w-3.5" /> Terug naar cases
       </Link>
 
       <header className="case-detail-header mt-10 grid gap-10 md:grid-cols-[1.2fr_1fr] md:gap-16 items-start border-b border-rule pb-12 mb-12">
@@ -72,6 +106,31 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
       <div className="case-detail-prose">
         <MDXContent />
       </div>
+
+      {(prev || next) && (
+        <nav className="case-nav" aria-label="Andere cases">
+          {prev ? (
+            <Link href={`/cases/${prev.slug}`} className="case-nav-link">
+              <span className="case-nav-dir">
+                <ArrowLeft className="h-3.5 w-3.5" /> Vorige case
+              </span>
+              <span className="case-nav-title">{prev.title}</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {next ? (
+            <Link href={`/cases/${next.slug}`} className="case-nav-link case-nav-next">
+              <span className="case-nav-dir">
+                Volgende case <ArrowRight className="h-3.5 w-3.5" />
+              </span>
+              <span className="case-nav-title">{next.title}</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
+      )}
     </article>
   );
 }

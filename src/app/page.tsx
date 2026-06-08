@@ -78,10 +78,11 @@ export default function HomePage() {
       />
 
       <section id="aanpak" className="container-tight pt-16 pb-10 scroll-mt-20">
-        <p className="section-marker">02 - Aanpak</p>
+        <p className="section-marker">Aanpak</p>
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16 items-start">
           <h2 className="display-2 max-w-xl">
-            Eerst begrijpen wat er echt gebeurt. Daarna pas bouwen.
+            Eerst <span className="text-accent">begrijpen</span> wat er echt gebeurt.
+            Daarna pas <span className="text-accent">bouwen</span>.
           </h2>
           <div className="grid gap-4">
             <ApproachStep
@@ -114,7 +115,7 @@ export default function HomePage() {
       <section id="cases" className="bg-navy-800 text-paper mt-20 scroll-mt-20">
         <div className="container-tight pt-16 pb-8">
           <p className="section-marker text-paper/60">
-            <span className="text-paper/60">03 - Recent gebouwd</span>
+            <span className="text-paper/60">Cases</span>
           </p>
           <h2 className="display-2 text-paper max-w-3xl mb-12">
             Software voor processen tussen mensen en systemen.
@@ -147,9 +148,10 @@ export default function HomePage() {
       <section id="over" className="container-tight pt-16 pb-14 scroll-mt-20">
         <div className="grid gap-12 md:grid-cols-[1fr_1fr] md:gap-16 items-start">
           <div>
-            <p className="section-marker">04 - Over</p>
+            <p className="section-marker">Over</p>
             <h2 className="display-2 mb-8 max-w-xl">
-              We maken impliciete bedrijfskennis operationeel schaalbaar.
+              We maken impliciete bedrijfskennis{" "}
+              <span className="text-accent">operationeel schaalbaar</span>.
             </h2>
             <p className="text-muted text-lg leading-relaxed max-w-prose">
               Tyne Works is het werk van Jans Tigelaar en Stijn Verhoeff, gevestigd in

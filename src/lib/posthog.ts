@@ -2,7 +2,8 @@ import posthog from "posthog-js";
 
 const posthogKey =
   process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "phc_AJxk8NJtcUWsMAbYm9CSpbwPYxv3icBQUwAxN9a66QzL";
-const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://eu.i.posthog.com";
+const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://t.tyneworks.nl";
+const posthogUiHost = process.env.NEXT_PUBLIC_POSTHOG_UI_HOST ?? "https://eu.posthog.com";
 
 let isPostHogReady = false;
 
@@ -13,6 +14,7 @@ export function initPostHog() {
 
   posthog.init(posthogKey, {
     api_host: posthogHost,
+    ui_host: posthogUiHost,
     capture_pageview: false,
     autocapture: true,
     persistence: "localStorage+cookie",

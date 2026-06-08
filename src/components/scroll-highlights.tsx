@@ -54,10 +54,11 @@ export function ScrollHighlights({ items }: ScrollHighlightsProps) {
   return (
     <section id="voor-wie" ref={sectionRef} className="scroll-highlight-section scroll-mt-20">
       <div className="scroll-highlight-sticky container-tight">
-        <p className="section-marker">01 - Voor wie</p>
+        <p className="section-marker">Voor wie</p>
         <div className="scroll-highlight-layout">
           <h2 className="display-2 max-w-3xl">
-            Voor bedrijven waar groei vastloopt tussen handwerk en systemen.
+            Voor bedrijven waar groei vastloopt tussen{" "}
+            <span className="text-accent">handwerk en systemen</span>.
           </h2>
           <div>
             {items.map((item, index) => (

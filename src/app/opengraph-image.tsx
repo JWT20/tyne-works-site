@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
-export const alt = "Tyne Works — Lichte software op maat";
+export const alt = "Tyne Works — AI voor bedrijfsspecifieke processen";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -46,7 +46,7 @@ export default function OpengraphImage() {
           <span style={{ color: "#2f6fed" }}>slimme processen</span>
         </div>
         <div style={{ color: "#9aa3b2", fontSize: "30px", maxWidth: "900px" }}>
-          Lichte software op maat voor bedrijfsspecifieke processen — met AI waar dat logisch is.
+          AI voor bedrijfsspecifieke processen — lichte software op maat, met AI waar dat nodig is.
         </div>
       </div>
     ),

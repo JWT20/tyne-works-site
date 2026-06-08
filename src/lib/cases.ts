@@ -40,3 +40,16 @@ export function getAllCases(): CaseMeta[] {
     .map(getCaseMeta)
     .sort((a, b) => (a.date && b.date ? b.date.localeCompare(a.date) : 0));
 }
+
+export function getAdjacentCases(slug: string): {
+  prev: CaseMeta | null;
+  next: CaseMeta | null;
+} {
+  const all = getAllCases();
+  const index = all.findIndex((c) => c.slug === slug);
+  if (index === -1) return { prev: null, next: null };
+  return {
+    prev: index > 0 ? all[index - 1] : null,
+    next: index < all.length - 1 ? all[index + 1] : null,
+  };
+}
