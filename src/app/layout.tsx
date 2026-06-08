@@ -26,7 +26,7 @@ const mono = JetBrains_Mono({
 
 const siteUrl = "https://tyneworks.nl";
 const siteDescription =
-  "Tyne Works bouwt lichte software die past bij hoe jouw bedrijf echt werkt. Tussen generieke SaaS en duur maatwerk, met AI als capability waar dat nodig is.";
+  "Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren en nieuwe omzet mogelijk maken. Lichte software op maat, met AI waar dat nodig is.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
