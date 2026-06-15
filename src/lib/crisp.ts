@@ -22,15 +22,24 @@ export function loadCrisp() {
   document.head.appendChild(script);
 }
 
+type OpenCrispOptions = {
+  /** Message shown in the chat as if sent by the operator. */
+  operatorMessage?: string;
+  /** Text pre-filled in the visitor's own compose box. */
+  visitorMessage?: string;
+};
+
 /**
- * Loads Crisp (if needed) and opens the chat. An optional message is
- * pre-filled in the visitor's compose box so the chat carries context
- * about which CTA they clicked.
+ * Loads Crisp (if needed), optionally shows an operator message and/or
+ * pre-fills the visitor compose box, then opens the chat.
  */
-export function openCrispChat(prefilledMessage?: string) {
+export function openCrispChat({ operatorMessage, visitorMessage }: OpenCrispOptions = {}) {
   loadCrisp();
-  if (prefilledMessage) {
-    window.$crisp?.push(["set", "message:text", [prefilledMessage]]);
+  if (operatorMessage) {
+    window.$crisp?.push(["do", "message:show", ["text", operatorMessage]]);
+  }
+  if (visitorMessage) {
+    window.$crisp?.push(["set", "message:text", [visitorMessage]]);
   }
   window.$crisp?.push(["do", "chat:open"]);
 }

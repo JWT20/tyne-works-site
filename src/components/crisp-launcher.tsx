@@ -11,7 +11,7 @@ export function CrispLauncher() {
 
   function openChat() {
     setIsLoading(true);
-    openCrispChat();
+    openCrispChat({});
     window.setTimeout(() => {
       setIsLoading(false);
       setHasOpenedChat(true);
