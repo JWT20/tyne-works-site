@@ -1,7 +1,7 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { openCrispChat } from "@/lib/crisp";
 
@@ -9,13 +9,15 @@ export function CrispLauncher() {
   const [isLoading, setIsLoading] = useState(false);
   const [hasOpenedChat, setHasOpenedChat] = useState(false);
 
+  useEffect(() => {
+    window.$crisp = window.$crisp ?? [];
+    window.$crisp.push(["on", "chat:opened", () => setHasOpenedChat(true)]);
+  }, []);
+
   function openChat() {
     setIsLoading(true);
     openCrispChat({});
-    window.setTimeout(() => {
-      setIsLoading(false);
-      setHasOpenedChat(true);
-    }, 1200);
+    window.setTimeout(() => setIsLoading(false), 1200);
   }
 
   if (hasOpenedChat) {
