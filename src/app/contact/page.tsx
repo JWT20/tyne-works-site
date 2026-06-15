@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+
+import { CrispCta } from "@/components/crisp-cta";
 
 export const metadata = {
   title: "Contact",
@@ -30,12 +32,13 @@ export default function ContactPage() {
             benoemen kansen en leveren een tastbaar voorstel voor de Build-fase. Geen rapport om
             in een la te leggen — uitkomst is een werkbaar plan en een prijs voor de bouw.
           </p>
-          <Link
-            href="mailto:jans.tigelaar@tyneworks.nl?subject=Discovery"
+          <CrispCta
+            operatorMessage="Hoi! Om een Discovery te plannen heb ik een paar dingen nodig: je naam, het proces dat je wil aanpakken, en een mailadres of telefoonnummer. Ik neem daarna per mail of telefoon contact met je op om een afspraak in te plannen."
+            visitorMessage="Ik wil graag een Discovery plannen."
             className="mt-auto inline-flex items-center gap-2 bg-paper px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:bg-paper/90 transition w-fit"
           >
-            Plan Discovery <ArrowRight className="h-4 w-4" />
-          </Link>
+            Plan Discovery
+          </CrispCta>
         </div>
 
         <div id="sessie" className="step-card scroll-mt-24">
@@ -46,12 +49,13 @@ export default function ContactPage() {
             In 45 minuten kijken we naar wat AI nu eigenlijk is, waar het wel en niet goed in is,
             welke risico&apos;s en governance erbij horen, en hoe je van idee naar praktijk komt.
           </p>
-          <Link
-            href="mailto:jans.tigelaar@tyneworks.nl?subject=AI-inspiratiesessie"
-            className="btn-ghost-light mt-auto w-fit"
+          <CrispCta
+            operatorMessage="Hoi! De AI-inspiratiesessie duurt 45 minuten en is gratis. Stuur me je naam en mailadres of telefoonnummer — ik neem daarna per mail of telefoon contact op met een paar tijdstippen om uit te kiezen."
+            visitorMessage="Ik wil graag een AI-inspiratiesessie plannen."
+            className="btn-ghost-light mt-auto w-fit inline-flex items-center gap-2"
           >
-            Plan AI-sessie <ArrowRight className="h-4 w-4" />
-          </Link>
+            Plan AI-sessie
+          </CrispCta>
         </div>
       </div>
 

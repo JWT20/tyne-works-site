@@ -3,29 +3,7 @@
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 
-const crispWebsiteId = "238bce1d-4435-4035-9661-9619be1426d4";
-
-declare global {
-  interface Window {
-    $crisp?: unknown[];
-    CRISP_WEBSITE_ID?: string;
-  }
-}
-
-function loadCrisp() {
-  if (document.getElementById("crisp-chat")) {
-    return;
-  }
-
-  window.$crisp = window.$crisp ?? [];
-  window.CRISP_WEBSITE_ID = crispWebsiteId;
-
-  const script = document.createElement("script");
-  script.id = "crisp-chat";
-  script.src = "https://client.crisp.chat/l.js";
-  script.async = true;
-  document.head.appendChild(script);
-}
+import { openCrispChat } from "@/lib/crisp";
 
 export function CrispLauncher() {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,8 +11,7 @@ export function CrispLauncher() {
 
   function openChat() {
     setIsLoading(true);
-    loadCrisp();
-    window.$crisp?.push(["do", "chat:open"]);
+    openCrispChat({});
     window.setTimeout(() => {
       setIsLoading(false);
       setHasOpenedChat(true);
