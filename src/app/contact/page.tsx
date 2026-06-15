@@ -33,7 +33,6 @@ export default function ContactPage() {
             in een la te leggen — uitkomst is een werkbaar plan en een prijs voor de bouw.
           </p>
           <CrispCta
-            operatorMessage="Hoi! Om een Discovery te plannen heb ik een paar dingen nodig: je naam, het proces dat je wil aanpakken, en een mailadres of telefoonnummer. Ik neem daarna per mail of telefoon contact met je op om een afspraak in te plannen."
             visitorMessage="Ik wil graag een Discovery plannen."
             className="mt-auto inline-flex items-center gap-2 bg-paper px-5 py-3 text-ink font-mono text-xs uppercase tracking-label hover:bg-paper/90 transition w-fit"
           >
@@ -50,7 +49,6 @@ export default function ContactPage() {
             welke risico&apos;s en governance erbij horen, en hoe je van idee naar praktijk komt.
           </p>
           <CrispCta
-            operatorMessage="Hoi! De AI-inspiratiesessie duurt 45 minuten en is gratis. Stuur me je naam en mailadres of telefoonnummer — ik neem daarna per mail of telefoon contact op met een paar tijdstippen om uit te kiezen."
             visitorMessage="Ik wil graag een AI-inspiratiesessie plannen."
             className="btn-ghost-light mt-auto w-fit inline-flex items-center gap-2"
           >

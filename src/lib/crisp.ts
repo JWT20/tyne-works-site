@@ -23,21 +23,12 @@ export function loadCrisp() {
 }
 
 type OpenCrispOptions = {
-  /** Message shown in the chat as if sent by the operator. */
-  operatorMessage?: string;
   /** Text pre-filled in the visitor's own compose box. */
   visitorMessage?: string;
 };
 
-/**
- * Loads Crisp (if needed), optionally shows an operator message and/or
- * pre-fills the visitor compose box, then opens the chat.
- */
-export function openCrispChat({ operatorMessage, visitorMessage }: OpenCrispOptions = {}) {
+export function openCrispChat({ visitorMessage }: OpenCrispOptions = {}) {
   loadCrisp();
-  if (operatorMessage) {
-    window.$crisp?.push(["do", "message:show", ["text", operatorMessage]]);
-  }
   if (visitorMessage) {
     window.$crisp?.push(["set", "message:text", [visitorMessage]]);
   }
