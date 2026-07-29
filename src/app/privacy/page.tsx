@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy & cookies",
-  description: "Privacy- en cookieverklaring van Tyne Works.",
+  title: "Privacy",
+  description: "Privacyverklaring van Tyne Works.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -18,11 +18,11 @@ export default function PrivacyPage() {
       </Link>
 
       <header className="mt-10 max-w-3xl border-b border-rule pb-10 mb-12">
-        <p className="label mb-4 text-accent">Privacy & cookies</p>
+        <p className="label mb-4 text-accent">Privacy</p>
         <h1 className="display-1">Hoe we met gegevens omgaan.</h1>
         <p className="mt-6 text-lg leading-relaxed text-muted">
-          Tyne Works gebruikt alleen gegevens die nodig zijn om de website te laten werken,
-          contact mogelijk te maken en de website met toestemming te verbeteren.
+          Tyne Works gebruikt alleen gegevens die nodig zijn om de website te laten werken en
+          contact mogelijk te maken.
         </p>
       </header>
 
@@ -33,30 +33,6 @@ export default function PrivacyPage() {
             Tyne Works is verantwoordelijk voor de verwerking van gegevens via deze website.
             Voor vragen kun je mailen naar{" "}
             <a href="mailto:jans.tigelaar@tyneworks.nl">jans.tigelaar@tyneworks.nl</a>.
-          </p>
-        </section>
-
-        <section>
-          <h2>Functionele cookies</h2>
-          <p>
-            Functionele cookies en vergelijkbare technieken gebruiken we om de website goed,
-            betrouwbaar en veilig te laten werken. Deze gebruiken we altijd. Ook slaan we je
-            cookievoorkeur lokaal op, zodat de banner niet bij elk bezoek opnieuw verschijnt.
-          </p>
-        </section>
-
-        <section>
-          <h2>Analytische cookies met PostHog</h2>
-          <p>
-            Als je analytische cookies accepteert, gebruiken we PostHog om te meten hoe bezoekers
-            de website gebruiken. Daarbij kunnen gebruiksgegevens worden verwerkt, zoals
-            paginaweergaven, klikgedrag, browser- en apparaatinformatie en een bezoekers-ID.
-          </p>
-          <p>
-            We gebruiken deze gegevens om de website te verbeteren, technische problemen te
-            onderzoeken en de gebruikservaring te analyseren. Als onderdeel hiervan kunnen we
-            sessies opnemen. Invoervelden worden standaard gemaskeerd om gevoelige gegevens te
-            beschermen. We gebruiken PostHog via de EU-regio.
           </p>
         </section>
 
@@ -74,11 +50,11 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2>Toestemming aanpassen</h2>
+          <h2>Jouw gegevens</h2>
           <p>
-            Je kunt je keuze wijzigen door de opgeslagen cookievoorkeur in je browser te wissen.
-            Daarna verschijnt de cookiebanner opnieuw. Je kunt ook mailen als je hulp wilt bij het
-            aanpassen of verwijderen van gegevens.
+            Wil je weten welke gegevens we van je hebben, of wil je gegevens laten aanpassen of
+            verwijderen? Mail dan naar{" "}
+            <a href="mailto:jans.tigelaar@tyneworks.nl">jans.tigelaar@tyneworks.nl</a>.
           </p>
         </section>
       </div>

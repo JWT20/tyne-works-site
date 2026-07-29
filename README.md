@@ -31,12 +31,6 @@ npm run build
 
 De statische output staat in `out/`.
 
-## Analytics
-
-PostHog wordt pas geladen nadat een bezoeker analytische cookies accepteert. Zet
-`NEXT_PUBLIC_POSTHOG_KEY` en eventueel `NEXT_PUBLIC_POSTHOG_HOST` op basis van
-`.env.example`.
-
 ## Structuur
 
 ```text
