@@ -23,7 +23,7 @@ export function SiteFooter() {
           <div>
             <p className="label mb-3">Info</p>
             <Link href="/privacy" className="text-sm text-ink hover:text-accent">
-              Privacy & cookies
+              Privacy
             </Link>
           </div>
         </div>
