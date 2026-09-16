@@ -57,8 +57,7 @@ export function ScrollHighlights({ items }: ScrollHighlightsProps) {
         <p className="section-marker">Voor wie</p>
         <div className="scroll-highlight-layout">
           <h2 className="display-2 max-w-3xl">
-            Voor bedrijven waar groei vastloopt tussen{" "}
-            <span className="text-accent">handwerk en systemen</span>.
+          Voor MKB-bedrijven waar groei vastloopt tussen handwerk, Excel en standaardsoftware.
           </h2>
           <div>
             {items.map((item, index) => (
