@@ -25,12 +25,12 @@ const mono = JetBrains_Mono({
 
 const siteUrl = "https://tyneworks.nl";
 const siteDescription =
-  "Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren en nieuwe omzet mogelijk maken. Lichte software op maat, met AI waar dat nodig is.";
+  "Tyne Works bouwt lichte maatwerk software en AI-toepassingen voor MKB-bedrijven. Wij automatiseren processen die standaardsoftware niet dekt, vanuit Groningen.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Tyne Works — AI voor bedrijfsspecifieke processen",
+    default: "Maatwerk software & AI-automatisering voor het MKB | Tyne Works Groningen",
     template: "%s — Tyne Works",
   },
   description: siteDescription,
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: siteUrl,
     siteName: "Tyne Works",
-    title: "Tyne Works — AI voor bedrijfsspecifieke processen",
+    title: "Maatwerk software & AI-automatisering voor het MKB | Tyne Works Groningen",
     description: siteDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tyne Works — AI voor bedrijfsspecifieke processen",
+    title: "Maatwerk software & AI-automatisering voor het MKB | Tyne Works Groningen",
     description: siteDescription,
   },
 };

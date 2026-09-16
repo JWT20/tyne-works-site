@@ -18,6 +18,7 @@ export function SiteFooter() {
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <p className="label mb-3">Contact</p>
+            <p className="text-sm text-ink">Groningen</p>
             <p className="text-sm text-ink">jans.tigelaar@tyneworks.nl</p>
           </div>
           <div>
@@ -32,8 +33,7 @@ export function SiteFooter() {
         <div className="container-tight py-4 text-xs text-muted flex justify-between gap-6 font-mono uppercase tracking-label">
           <span>© {new Date().getFullYear()} Tyne Works · KVK 42059892</span>
           <span className="text-right">
-            Jans Tigelaar
-            <span className="block mt-1">Co-creator: Stijn Verhoeff</span>
+            Jans Tigelaar &amp; Stijn Verhoeff
           </span>
         </div>
       </div>

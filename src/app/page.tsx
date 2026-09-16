@@ -11,14 +11,15 @@ export default function HomePage() {
       <section className="hero relative overflow-hidden">
         <div className="hero-grid" aria-hidden />
         <div className="container-tight pt-10 pb-16 relative">
-          <p className="label text-accent mb-3">Software & AI voor bedrijfsspecifieke processen</p>
+          <p className="label text-accent mb-3">Software- en AI-bureau uit Groningen</p>
           <h1 className="display-1 max-w-4xl">
-            Van vakkennis naar{" "}
-            <span className="font-serif italic text-accent">slimme processen</span>
+            Van vakkennis naar <span className="font-serif italic text-accent">slimme processen</span>:
+            maatwerk software &amp; AI voor het MKB
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
-            Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren
-            en nieuwe omzet mogelijk maken.
+            Tyne Works zet bedrijfsspecifieke kennis om in slimme software en AI-toepassingen.
+            Zo worden processen efficiënter en ontstaat ruimte voor groei, zonder groot
+            IT-project.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link href="/contact" className="btn-primary">
@@ -81,8 +82,8 @@ export default function HomePage() {
         <p className="section-marker">Aanpak</p>
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16 items-start">
           <h2 className="display-2 max-w-xl">
-            Eerst <span className="text-accent">begrijpen</span> wat er echt gebeurt.
-            Daarna pas <span className="text-accent">bouwen</span>.
+            Zo pakken we <span className="text-accent">procesautomatisering</span> aan: eerst begrijpen,
+            dan bouwen.
           </h2>
           <div className="grid gap-4">
             <ApproachStep
@@ -118,7 +119,7 @@ export default function HomePage() {
             <span className="text-paper/60">Cases</span>
           </p>
           <h2 className="display-2 text-paper max-w-3xl mb-12">
-            Software voor processen tussen mensen en systemen.
+            Voorbeelden van AI-toepassingen en maatwerk software in de praktijk.
           </h2>
         </div>
         {cases.length > 3 && (
@@ -154,8 +155,8 @@ export default function HomePage() {
               <span className="text-accent">operationeel schaalbaar</span>.
             </h2>
             <p className="text-muted text-lg leading-relaxed max-w-prose">
-              Tyne Works is het werk van Jans Tigelaar en Stijn Verhoeff, gevestigd in
-              Groningen. Voor groeiende bedrijven waar werk vastloopt tussen
+              Tyne Works is een software- en AI-bureau uit Groningen, opgericht door Jans Tigelaar
+              en Stijn Verhoeff. Voor groeiende bedrijven waar werk vastloopt tussen
               standaardsoftware, spreadsheets, WhatsApp, losse documenten en handmatige
               overdracht bouwen we lichte software op maat voor specifieke
               bedrijfsprocessen.
@@ -167,7 +168,7 @@ export default function HomePage() {
               Heb je een concreet proces in gedachten? Begin met een Discovery: we werken het
               samen uit en je krijgt een werkbaar plan met prijs. Wil je eerst meer leren over
               wat AI is en wat het voor jouw bedrijf kan betekenen? Een vrijblijvende
-              AI-inspiratiesessie geeft je een eerlijk beeld van de mogelijkheden, risico&apos;s
+              AI-inspiratiesessie (AI-workshop voor je team) geeft je een eerlijk beeld van de mogelijkheden, risico&apos;s
               en governance.
             </p>
             <div className="flex flex-wrap gap-3">
