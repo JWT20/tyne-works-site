@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="hero relative overflow-hidden">
         <div className="hero-grid" aria-hidden />
         <div className="container-tight pt-10 pb-16 relative">
-          <p className="label text-accent mb-3">Maatwerk software & AI voor het MKB</p>
+          <p className="label text-accent mb-3">Software- en AI-bureau uit Groningen</p>
           <h1 className="display-1 max-w-4xl">
             Van vakkennis naar <span className="font-serif italic text-accent">slimme processen</span>:
             maatwerk software &amp; AI voor het MKB
