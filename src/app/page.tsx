@@ -13,8 +13,8 @@ export default function HomePage() {
         <div className="container-tight pt-10 pb-16 relative">
           <p className="label text-accent mb-3">Software & AI voor bedrijfsspecifieke processen</p>
           <h1 className="display-1 max-w-4xl">
-            Van vakkennis naar{" "}
-            <span className="font-serif italic text-accent">slimme processen</span>
+            Van vakkennis naar <span className="font-serif italic text-accent">slimme processen</span>:
+            maatwerk software &amp; AI voor het MKB
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
             Tyne Works zet bedrijfsspecifieke kennis om in systemen die processen verbeteren
@@ -46,6 +46,13 @@ export default function HomePage() {
             />
           </div>
         </div>
+      </section>
+
+      <section id="voor-wie" className="container-tight pt-16 pb-4 scroll-mt-20">
+        <p className="section-marker">Voor wie</p>
+        <h2 className="display-2 max-w-3xl">
+          Voor MKB-bedrijven waar groei vastloopt tussen handwerk, Excel en standaardsoftware.
+        </h2>
       </section>
 
       <ScrollHighlights
