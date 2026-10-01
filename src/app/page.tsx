@@ -122,7 +122,7 @@ export default function HomePage() {
             Voorbeelden van AI-toepassingen en maatwerk software in de praktijk.
           </h2>
         </div>
-        {cases.length > 3 && (
+        {cases.length + 1 > 3 && (
           <p className="cases-hint" aria-hidden>
             Sleep opzij voor meer <ArrowRight className="h-3.5 w-3.5" />
           </p>
@@ -141,6 +141,19 @@ export default function HomePage() {
                 </span>
               </Link>
             ))}
+            <Link id="producten" href="/dockscan" className="case-card scroll-mt-24">
+              <div className="case-card-meta">
+                <span className="border border-paper/30 px-2 py-1 text-paper">Product</span>
+              </div>
+              <h3 className="case-card-title">Dockscan</h3>
+              <p className="case-card-summary">
+                Producten picken zonder barcode met beeldherkenning. Lees pakbonnen uit
+                en werk je voorraad automatisch bij.
+              </p>
+              <span className="case-card-link">
+                Bekijk het product <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </span>
+            </Link>
           </div>
         </div>
         <div className="h-10" aria-hidden />

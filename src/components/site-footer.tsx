@@ -23,9 +23,14 @@ export function SiteFooter() {
           </div>
           <div>
             <p className="label mb-3">Info</p>
-            <Link href="/privacy" className="text-sm text-ink hover:text-accent">
-              Privacy
-            </Link>
+            <div className="flex flex-col items-start gap-2">
+              <Link href="/dockscan" className="text-sm text-ink hover:text-accent">
+                Dockscan
+              </Link>
+              <Link href="/privacy" className="text-sm text-ink hover:text-accent">
+                Privacy
+              </Link>
+            </div>
           </div>
         </div>
       </div>
