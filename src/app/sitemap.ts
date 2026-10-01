@@ -6,7 +6,7 @@ const siteUrl = "https://tyneworks.nl";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/contact"].map((route) => ({
+  const staticRoutes = ["", "/contact", "/dockscan"].map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,

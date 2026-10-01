@@ -17,7 +17,7 @@ export function SiteHeader() {
             Tyne Works
           </span>
         </Link>
-        <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-5 font-mono text-[11px] uppercase tracking-label text-muted md:flex">
+        <nav className="hidden items-center gap-3 font-mono text-[10px] uppercase tracking-wide text-muted md:flex lg:gap-5 lg:text-[11px] lg:tracking-label">
           <Link href="/#voor-wie" className="hover:text-ink">
             Voor wie
           </Link>
@@ -26,6 +26,9 @@ export function SiteHeader() {
           </Link>
           <Link href="/#cases" className="hover:text-ink">
             Cases
+          </Link>
+          <Link href="/#producten" className="hover:text-ink">
+            Producten
           </Link>
           <Link href="/#over" className="hover:text-ink">
             Over

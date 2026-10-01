@@ -12,6 +12,7 @@ const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: process.env.NODE_ENV === "development" ? ".next-dev" : ".next",
   pageExtensions: ["ts", "tsx", "mdx"],
   output: "export",
   outputFileTracingRoot: projectRoot,
